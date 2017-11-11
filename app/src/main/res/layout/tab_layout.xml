@@ -1,0 +1,36 @@
+<LinearLayout
+    android:id="@+id/main_layout_admin"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.DashboardActivity"
+    android:orientation="vertical">
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tab_layout_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:background="?attr/colorPrimary"
+        android:elevation="6dp"
+        android:minHeight="?attr/actionBarSize"
+        app:tabMode="scrollable"
+        app:tabGravity="fill"
+        app:paddingStart="-1dp"
+        app:paddingEnd="-1dp"
+        app:tabIndicatorHeight="4dp"/>
+
+    <FrameLayout
+        android:id="@+id/content_menu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+        <android.support.v4.view.ViewPager
+            android:id="@+id/pager_menu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/tab_layout_menu"/>
+    </FrameLayout>
+</LinearLayout>

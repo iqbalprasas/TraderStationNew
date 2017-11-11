@@ -1,0 +1,29 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/fr1"
+            android:icon="@drawable/cloudcomputing"
+            android:title="First" />
+
+        <item
+            android:id="@+id/fr2"
+            android:icon="@drawable/cloudcomputing"
+            android:title="Second" />
+
+        <item
+            android:id="@+id/fr3"
+            android:icon="@drawable/cloudcomputing"
+            android:title="Third" />
+
+        <item
+            android:id="@+id/fr4"
+            android:icon="@drawable/cloudcomputing"
+            android:title="Fourth" />
+
+    </group>
+
+</menu>
