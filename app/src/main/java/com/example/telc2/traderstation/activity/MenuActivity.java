@@ -15,15 +15,19 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.SearchView;
 import android.support.v7.widget.Toolbar;
+import android.text.InputType;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.telc2.traderstation.R;
 import com.example.telc2.traderstation.adapter.PagerAdapter;
+import com.example.telc2.traderstation.formatter.SearchViewFormatter;
 
 public class MenuActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -35,6 +39,7 @@ public class MenuActivity extends AppCompatActivity implements NavigationView.On
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
+        handleIntent(getIntent());
 
         viewPager = (ViewPager) findViewById(R.id.view_pager);
         drawer = (DrawerLayout) findViewById(R.id.drawerLayout);
@@ -136,6 +141,7 @@ public class MenuActivity extends AppCompatActivity implements NavigationView.On
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
+        menu.clear();
         MenuInflater menuInflater = getMenuInflater();
         menuInflater.inflate(R.menu.search_menu, menu);
 
@@ -150,11 +156,19 @@ public class MenuActivity extends AppCompatActivity implements NavigationView.On
         if (searchView != null) {
             searchView.setSearchableInfo(searchManager.getSearchableInfo(MenuActivity.this.getComponentName()));
         }
+//        searchView.findViewById(android.support.v7.appcompat.R.id.search_button).setBackground(getResources().getDrawable(R.drawable.ic_search));
+//          searchView.findViewById(android.support.v7.appcompat.R.id.search_close_btn).setBackground(getResources().getDrawable(R.drawable.ic_close_search_gray));
+//        searchView.findViewById(android.support.v7.appcompat.R.id.search_plate).setBackgroundColor(Color.WHITE);
+//        EditText searchEditText = (EditText)searchView.findViewById(android.support.v7.appcompat.R.id.search_src_text);
+//        searchEditText.setTextColor(Color.parseColor("#01b501"));
+//        searchEditText.setHintTextColor(Color.WHITE);
+//        searchView.findViewById(android.support.v7.appcompat.R.id.search_src_text).setBackgroundColor(Color.parseColor("#01b501"));
+
         return super.onCreateOptionsMenu(menu);
 
     }
 
-    /*@Override
+    @Override
     protected void onNewIntent(Intent intent) {
         handleIntent(intent);
     }
@@ -166,7 +180,8 @@ public class MenuActivity extends AppCompatActivity implements NavigationView.On
             String query = intent.getStringExtra(SearchManager.QUERY);
             Toast.makeText(MenuActivity.this, query,
                     Toast.LENGTH_LONG).show();
+            finish();
         }
-    }*/
+    }
 
 }
