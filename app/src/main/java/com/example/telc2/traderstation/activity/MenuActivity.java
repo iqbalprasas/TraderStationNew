@@ -112,7 +112,9 @@ public class MenuActivity extends AppCompatActivity implements NavigationView.On
         if (id == R.id.fr1) {
             viewPager.setCurrentItem(0);
         } else if (id == R.id.fr2) {
-            viewPager.setCurrentItem(1);
+            Intent intent = new Intent(this, ProfileActivity.class);
+            intent.putExtra("string", "Go to other Activity by NavigationView item cliked!");
+            startActivity(intent);
         } else if (id == R.id.fr3) {
             viewPager.setCurrentItem(2);
         } else if (id == R.id.fr4){
