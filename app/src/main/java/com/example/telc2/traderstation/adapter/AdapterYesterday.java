@@ -72,4 +72,9 @@ public class AdapterYesterday extends RecyclerView.Adapter<AdapterYesterday.Hold
             txFlag = (ImageView) itemView.findViewById(R.id.image_flag);
         }
     }
+
+    public void updateList(List<Yesterday> list){
+        yesterdayData = list;
+        notifyDataSetChanged();
+    }
 }

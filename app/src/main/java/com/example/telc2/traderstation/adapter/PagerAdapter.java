@@ -4,11 +4,9 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
-import com.example.telc2.traderstation.fragment.FormPeminjamanFragment;
-import com.example.telc2.traderstation.fragment.StatusKunciFragment;
-import com.example.telc2.traderstation.fragment.StatusSuratFragment;
+import com.example.telc2.traderstation.fragment.ChatFragment;
+import com.example.telc2.traderstation.fragment.TimelineFragment;
 import com.example.telc2.traderstation.fragment.YesterdayFragment;
-import com.example.telc2.traderstation.model.Yesterday;
 
 /**
  * Created by juvetic on 6/13/17.
@@ -29,10 +27,10 @@ public class PagerAdapter extends FragmentPagerAdapter {
                 YesterdayFragment tab1 = new YesterdayFragment();
                 return tab1;
             case 1:
-                YesterdayFragment tab2 = new YesterdayFragment();
+                ChatFragment tab2 = new ChatFragment();
                 return tab2;
             case 2:
-                YesterdayFragment tab3 = new YesterdayFragment();
+                TimelineFragment tab3 = new TimelineFragment();
                 return tab3;
             case 3:
                 YesterdayFragment tab4 = new YesterdayFragment();

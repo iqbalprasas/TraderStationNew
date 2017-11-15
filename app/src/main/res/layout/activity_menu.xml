@@ -61,7 +61,8 @@
                 android:minHeight="?attr/actionBarSize"
                 app:tabBackground="@drawable/tab_colour"
                 app:tabIndicatorColor="@android:color/white"
-                app:tabMode="scrollable"
+                app:tabMode="fixed"
+                app:tabMaxWidth="0dp"
                 app:tabGravity="fill"
                 app:paddingStart="-1dp"
                 app:paddingEnd="-1dp"
@@ -83,6 +84,7 @@
             android:layout_gravity="start"
             android:fitsSystemWindows="true"
             app:itemTextColor="@drawable/nav_state_list"
+            app:headerLayout="@layout/nav_header"
             app:itemBackground="@drawable/nav_state_background"
             app:itemIconTint="@android:color/black"
             app:menu="@menu/drawer_view" />

@@ -8,6 +8,7 @@ import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
+import android.view.Menu;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -54,6 +55,8 @@ public class YesterdayFragment extends Fragment {
         // Inflate the layout for this fragment
         View v =  inflater.inflate(R.layout.fragment_yesterday, container, false);
 
+        setHasOptionsMenu(true);
+
         recyclerView = (RecyclerView) v.findViewById(R.id.recyclerYesterday);
         //dataList = new ArrayList<HashMap<String,String>>();
         adapterYesterday = new AdapterYesterday(yesterdayList);
@@ -82,8 +85,8 @@ public class YesterdayFragment extends Fragment {
                 String ket = c.getString("ket");
 
                 /*StatusKunci statusKunci = new StatusKunci(bts, status, tglp, nama, inst, tglk, jmlkunci, ket);
-                yesterdayList.add(statusKunci);
-                adapterYesterday.notifyDataSetChanged();*/
+                chatList.add(statusKunci);
+                adapterTimeline.notifyDataSetChanged();*/
 
             }
 
@@ -153,6 +156,12 @@ public class YesterdayFragment extends Fragment {
             yesterdayList.add(yesterday);
             adapterYesterday.notifyDataSetChanged();
         }
+    }
+
+    @Override
+    public void onPrepareOptionsMenu(Menu menu) {
+        menu.findItem(R.id.search).setVisible(false);
+        super.onPrepareOptionsMenu(menu);
     }
 
 }

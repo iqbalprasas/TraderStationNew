@@ -1,0 +1,100 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/colorPrimary"
+    android:padding="16dp"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:clickable="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:gravity="right"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/btn_edit_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:background="@drawable/ic_setting_profile"
+            app:srcCompat="@drawable/ic_setting_profile" />
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/img_profile_header"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:clickable="true"
+        android:layout_marginBottom="8dp"
+        app:srcCompat="@drawable/profile" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Profile Name"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:clickable="true"
+        android:textColor="@android:color/white"
+        android:id="@+id/text_profile_name_header"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:clickable="true">
+        <TextView
+            android:id="@+id/tittle_balance_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Balance : "
+            android:gravity="center"
+            android:textColor="@android:color/white"/>
+        <TextView
+            android:id="@+id/text_balance_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="100"
+            android:gravity="center"
+            android:textColor="@android:color/white"/>
+        <TextView
+            android:id="@+id/title_currency_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=" USD"
+            android:gravity="center"
+            android:textColor="@android:color/white"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:clickable="true">
+        <TextView
+            android:id="@+id/tittle_income_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Income : "
+            android:gravity="center"
+            android:textColor="@android:color/white"/>
+        <TextView
+            android:id="@+id/text_income_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="100"
+            android:gravity="center"
+            android:textColor="@android:color/white"/>
+        <TextView
+            android:id="@+id/title_currency2_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=" USD"
+            android:gravity="center"
+            android:textColor="@android:color/white"/>
+    </LinearLayout>
+
+</LinearLayout>

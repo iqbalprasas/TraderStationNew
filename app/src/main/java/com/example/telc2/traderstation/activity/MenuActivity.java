@@ -19,7 +19,9 @@ import android.text.InputType;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -59,16 +61,12 @@ public class MenuActivity extends AppCompatActivity implements NavigationView.On
         tabLayout.addTab(tabLayout.newTab());
         tabLayout.addTab(tabLayout.newTab());
         tabLayout.addTab(tabLayout.newTab());
-        tabLayout.addTab(tabLayout.newTab());
-        tabLayout.addTab(tabLayout.newTab());
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
         //tabLayout.setupWithViewPager(viewPager);
         tabLayout.getTabAt(0).setIcon(R.drawable.ic_friend);
         tabLayout.getTabAt(1).setIcon(R.drawable.ic_chat);
-        tabLayout.getTabAt(2).setIcon(R.drawable.ic_news);
-        tabLayout.getTabAt(3).setIcon(R.drawable.ic_calendar);
-        tabLayout.getTabAt(4).setIcon(R.drawable.ic_timeline);
-        tabLayout.getTabAt(5).setIcon(R.drawable.ic_live);
+        tabLayout.getTabAt(2).setIcon(R.drawable.ic_timeline);
+        tabLayout.getTabAt(3).setIcon(R.drawable.ic_news);
 
         LinearLayout linearLayout = (LinearLayout)tabLayout.getChildAt(0);
         linearLayout.setShowDividers(LinearLayout.SHOW_DIVIDER_MIDDLE);
@@ -80,6 +78,27 @@ public class MenuActivity extends AppCompatActivity implements NavigationView.On
 
         //handling navigation view item event
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        View headerView = navigationView.getHeaderView(0);
+        ImageButton settingView = (ImageButton)headerView.findViewById(R.id.btn_edit_profile);
+        settingView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                drawer.closeDrawer(GravityCompat.START);
+                Intent intent = new Intent(MenuActivity.this, ProfileActivity.class);
+                intent.putExtra("string", "Go to other Activity by NavigationView item cliked!");
+                startActivity(intent);
+            }
+        });
+//        headerView.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                drawer.closeDrawer(GravityCompat.START);
+//                Intent intent = new Intent(MenuActivity.this, ProfileActivity.class);
+//                intent.putExtra("string", "Go to other Activity by NavigationView item cliked!");
+//                startActivity(intent);
+//            }
+//        }
+
         assert navigationView != null;
         navigationView.setNavigationItemSelectedListener(this);
 
@@ -158,13 +177,6 @@ public class MenuActivity extends AppCompatActivity implements NavigationView.On
         if (searchView != null) {
             searchView.setSearchableInfo(searchManager.getSearchableInfo(MenuActivity.this.getComponentName()));
         }
-//        searchView.findViewById(android.support.v7.appcompat.R.id.search_button).setBackground(getResources().getDrawable(R.drawable.ic_search));
-//          searchView.findViewById(android.support.v7.appcompat.R.id.search_close_btn).setBackground(getResources().getDrawable(R.drawable.ic_close_search_gray));
-//        searchView.findViewById(android.support.v7.appcompat.R.id.search_plate).setBackgroundColor(Color.WHITE);
-//        EditText searchEditText = (EditText)searchView.findViewById(android.support.v7.appcompat.R.id.search_src_text);
-//        searchEditText.setTextColor(Color.parseColor("#01b501"));
-//        searchEditText.setHintTextColor(Color.WHITE);
-//        searchView.findViewById(android.support.v7.appcompat.R.id.search_src_text).setBackgroundColor(Color.parseColor("#01b501"));
 
         return super.onCreateOptionsMenu(menu);
 
