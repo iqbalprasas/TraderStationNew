@@ -179,6 +179,9 @@ public class TimelineFragment extends Fragment implements SearchView.OnQueryText
 
     @Override
     public boolean onQueryTextChange(String newText) {
+        if(newText.equals("")){
+            adapterTimeline.updateList(timelineList);
+        }
         return false;
     }
 }

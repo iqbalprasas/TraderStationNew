@@ -4,6 +4,18 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_login">Login</string>
+    <string name="economic_calendar">Economic Calendar</string>
+    <string name="event">Event \n</string>
+    <string name="webinar">Webinar \n</string>
+    <string name="competition">Competition \n</string>
+    <string name="broker">Broker \n</string>
+    <string name="rebate_broker">Rebate Broker</string>
+    <string name="trader_performance">Trader Performance</string>
+    <string name="ea_performance">EA Performance</string>
+    <string name="pamm">PAMM \n</string>
+    <string name="gallery">Gallery \n</string>
+    <string name="promotion">Promotion \n</string>
+    <string name="shop">Shop \n</string>
     <string-array name="navigation_drawer_items_array">
         <item>Connect</item>
         <item>Fixtures</item>

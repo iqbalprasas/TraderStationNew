@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://C:\Users\iqbal\Documents\Kantor\TraderStationNew\Telkomsel.iml" filepath="C:\Users\iqbal\Documents\Kantor\TraderStationNew\Telkomsel.iml" />
       <module fileurl="file://$PROJECT_DIR$/TraderStationNew.iml" filepath="$PROJECT_DIR$/TraderStationNew.iml" />
       <module fileurl="file://$PROJECT_DIR$/aFileChooser/aFileChooser.iml" filepath="$PROJECT_DIR$/aFileChooser/aFileChooser.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />

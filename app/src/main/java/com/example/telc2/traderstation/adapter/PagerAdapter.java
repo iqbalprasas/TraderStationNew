@@ -5,6 +5,8 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
 import com.example.telc2.traderstation.fragment.ChatFragment;
+import com.example.telc2.traderstation.fragment.ContactFragment;
+import com.example.telc2.traderstation.fragment.MoreFragment;
 import com.example.telc2.traderstation.fragment.TimelineFragment;
 import com.example.telc2.traderstation.fragment.YesterdayFragment;
 
@@ -24,7 +26,7 @@ public class PagerAdapter extends FragmentPagerAdapter {
     public Fragment getItem(int position) {
         switch (position) {
             case 0:
-                YesterdayFragment tab1 = new YesterdayFragment();
+                ContactFragment tab1 = new ContactFragment();
                 return tab1;
             case 1:
                 ChatFragment tab2 = new ChatFragment();
@@ -33,14 +35,8 @@ public class PagerAdapter extends FragmentPagerAdapter {
                 TimelineFragment tab3 = new TimelineFragment();
                 return tab3;
             case 3:
-                YesterdayFragment tab4 = new YesterdayFragment();
+                MoreFragment tab4 = new MoreFragment();
                 return tab4;
-            case 4:
-                YesterdayFragment tab5 = new YesterdayFragment();
-                return tab5;
-            case 5:
-                YesterdayFragment tab6 = new YesterdayFragment();
-                return tab6;
             default:
                 return null;
         }

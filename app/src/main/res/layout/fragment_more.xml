@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:weightSum="3">
+
+        <Button
+            android:id="@+id/btn_more_calendar"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textColor="#FFFFFF"
+            android:text="Economic Calendar"
+            android:gravity="center"
+            android:drawablePadding="4dp"
+            android:drawableTop="@drawable/ic_calendar"/>
+        <Button
+            android:id="@+id/btn_more_event"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="#FFFFFF"
+            android:text="@string/event"
+            android:drawablePadding="4dp"
+            android:drawableTop="@drawable/ic_calendar"/>
+        <Button
+            android:id="@+id/btn_more_webinar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="#FFFFFF"
+            android:text="@string/webinar"
+            android:drawablePadding="4dp"
+            android:drawableTop="@drawable/ic_calendar"/>
+    </LinearLayout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:weightSum="3">
+
+        <Button
+            android:id="@+id/btn_more_competition"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textSize="12sp"
+            android:textColor="#FFFFFF"
+            android:text="@string/competition"
+            android:drawablePadding="4dp"
+            android:drawableTop="@drawable/ic_friend"/>
+        <Button
+            android:id="@+id/btn_more_broker"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="#FFFFFF"
+            android:text="@string/broker"
+            android:drawablePadding="4dp"
+            android:drawableTop="@drawable/ic_calendar"/>
+        <Button
+            android:id="@+id/btn_more_rebate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="#FFFFFF"
+            android:text="@string/rebate_broker"
+            android:drawablePadding="4dp"
+            android:drawableTop="@drawable/ic_calendar"/>
+    </LinearLayout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:weightSum="3">
+
+        <Button
+            android:id="@+id/btn_more_trader_performance"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textColor="#FFFFFF"
+            android:text="@string/trader_performance"
+            android:drawablePadding="4dp"
+            android:textSize="12sp"
+            android:drawableTop="@drawable/ic_friend"/>
+        <Button
+            android:id="@+id/btn_more_ea_performance"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textColor="#FFFFFF"
+            android:text="@string/ea_performance"
+            android:drawablePadding="4dp"
+            android:textSize="12sp"
+            android:drawableTop="@drawable/ic_calendar"/>
+        <Button
+            android:id="@+id/btn_more_pamm"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="#FFFFFF"
+            android:text="@string/pamm"
+            android:drawablePadding="4dp"
+            android:drawableTop="@drawable/ic_calendar"/>
+    </LinearLayout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:weightSum="3">
+
+        <Button
+            android:id="@+id/btn_more_gallery"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textColor="#FFFFFF"
+            android:text="@string/gallery"
+            android:drawablePadding="4dp"
+            android:textSize="12sp"
+            android:drawableTop="@drawable/ic_friend"/>
+        <Button
+            android:id="@+id/btn_more_promotion"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textColor="#FFFFFF"
+            android:text="@string/promotion"
+            android:drawablePadding="4dp"
+            android:textSize="12sp"
+            android:drawableTop="@drawable/ic_calendar"/>
+        <Button
+            android:id="@+id/btn_more_shop"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="#FFFFFF"
+            android:text="@string/shop"
+            android:drawablePadding="4dp"
+            android:drawableTop="@drawable/ic_calendar"/>
+    </LinearLayout>
+</LinearLayout>
+</ScrollView>

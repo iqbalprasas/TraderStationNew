@@ -1,6 +1,7 @@
 package com.example.telc2.traderstation.activity;
 
 import android.app.SearchManager;
+import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
@@ -41,7 +42,8 @@ public class MenuActivity extends AppCompatActivity implements NavigationView.On
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
-        handleIntent(getIntent());
+
+        //handleIntent(getIntent());
 
         viewPager = (ViewPager) findViewById(R.id.view_pager);
         drawer = (DrawerLayout) findViewById(R.id.drawerLayout);
@@ -175,27 +177,37 @@ public class MenuActivity extends AppCompatActivity implements NavigationView.On
             searchView = (SearchView) searchItem.getActionView();
         }
         if (searchView != null) {
-            searchView.setSearchableInfo(searchManager.getSearchableInfo(MenuActivity.this.getComponentName()));
+            searchView.setSearchableInfo(searchManager.getSearchableInfo(new ComponentName(this, SearchResultActivity.class)));
         }
-
         return super.onCreateOptionsMenu(menu);
-
     }
 
     @Override
-    protected void onNewIntent(Intent intent) {
-        handleIntent(intent);
-    }
-
-
-    private void handleIntent(Intent intent) {
-
+    public void startActivity(Intent intent) {
+        // check if search intent
         if (Intent.ACTION_SEARCH.equals(intent.getAction())) {
-            String query = intent.getStringExtra(SearchManager.QUERY);
-            Toast.makeText(MenuActivity.this, query,
-                    Toast.LENGTH_LONG).show();
-            finish();
+            if(viewPager.getCurrentItem()==0){
+                intent.putExtra("key", "From contact");
+            }else{
+                intent.putExtra("key", "From chat");
+            }
         }
+        super.startActivity(intent);
     }
+
+//    @Override
+//    protected void onNewIntent(Intent intent) {
+//        handleIntent(intent);
+//    }
+//
+//
+//    private void handleIntent(Intent intent) {
+//
+//        if (Intent.ACTION_SEARCH.equals(intent.getAction())) {
+//            String query = intent.getStringExtra(SearchManager.QUERY);
+//            Toast.makeText(MenuActivity.this, query,
+//                    Toast.LENGTH_LONG).show();
+//        }
+//    }
 
 }

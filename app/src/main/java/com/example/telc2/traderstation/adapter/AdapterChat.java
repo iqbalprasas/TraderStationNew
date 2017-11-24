@@ -1,5 +1,7 @@
 package com.example.telc2.traderstation.adapter;
 
+import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,6 +10,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.telc2.traderstation.R;
+import com.example.telc2.traderstation.activity.ChattingActivity;
 import com.example.telc2.traderstation.model.Chat;
 
 import java.util.List;
@@ -47,7 +50,7 @@ public class AdapterChat extends RecyclerView.Adapter<AdapterChat.HolderData>{
         return chatList.size();
     }
 
-    public class HolderData extends RecyclerView.ViewHolder{
+    public class HolderData extends RecyclerView.ViewHolder implements View.OnClickListener{
 
         public TextView txIdChat;
         public ImageView txProfilePhoto;
@@ -57,12 +60,22 @@ public class AdapterChat extends RecyclerView.Adapter<AdapterChat.HolderData>{
 
         public HolderData(View itemView) {
             super(itemView);
+            itemView.setOnClickListener(this);
             txIdChat = (TextView) itemView.findViewById(R.id.id_id_chat);
             txChat = (TextView) itemView.findViewById(R.id.highlight_profile_chat);
             txProfileName = (TextView) itemView.findViewById(R.id.name_profile_chat);
             txProfilePhoto = (ImageView) itemView.findViewById(R.id.img_profile_chat);
             txNumChat = (TextView) itemView.findViewById(R.id.num_profile_chat);
         }
+
+        @Override
+        public void onClick(View view) {
+            Context context = view.getContext();
+            Intent intent = new Intent(context, ChattingActivity.class);
+            intent.putExtra("profileName", txProfileName.getText().toString());
+            context.startActivity(intent);
+        }
+
     }
 
     public void updateList(List<Chat> list){

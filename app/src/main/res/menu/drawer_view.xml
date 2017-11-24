@@ -30,7 +30,19 @@
             android:icon="@drawable/cloudcomputing"
             android:title="Fourth" />
     </group>
-
-
+    <group android:checkableBehavior="single"
+        android:id="@+id/gr5">
+        <item
+            android:id="@+id/fr5"
+            android:icon="@drawable/cloudcomputing"
+            android:title="Fifth" />
+    </group>
+    <group android:checkableBehavior="single"
+        android:id="@+id/gr6">
+        <item
+            android:id="@+id/fr6"
+            android:icon="@drawable/cloudcomputing"
+            android:title="Sixth" />
+    </group>
 
 </menu>
