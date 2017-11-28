@@ -1,5 +1,6 @@
 package com.example.telc2.traderstation.activity;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
@@ -30,19 +31,22 @@ public class LoginActivity extends AppCompatActivity {
 
     Button btnMasuk;
     EditText edt_usname, edt_pswd;
-    String login = null;
-    private final String ip = "http://192.168.0.150/web/traderstation/service/login_android.php";
+    ProgressDialog dialog;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+        dialog = new ProgressDialog(LoginActivity.this);
+        dialog.setMessage("Please wait");
         edt_usname = (EditText) findViewById(R.id.edt_usname);
         edt_pswd = (EditText) findViewById(R.id.edt_pswd);
         btnMasuk = (Button) findViewById(R.id.btn_masuk);
         btnMasuk.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                dialog.show();
                 new SendPostRequest().execute();
             }
         });
@@ -55,7 +59,7 @@ public class LoginActivity extends AppCompatActivity {
         protected String doInBackground(String... arg0) {
 
             try {
-                URL url = new URL(ip); // here is your URL path---------00000
+                URL url = new URL(getString(R.string.server));
 
                 JSONObject postDataParams = new JSONObject();
                 postDataParams.put("un", edt_usname.getText().toString());
@@ -94,10 +98,8 @@ public class LoginActivity extends AppCompatActivity {
                         sb.append(line);
                         break;
                     }
-
                     in.close();
                     return sb.toString();
-
                 }
                 else {
                     return new String("false : "+responseCode);
@@ -106,17 +108,17 @@ public class LoginActivity extends AppCompatActivity {
             catch(Exception e){
                 return new String("Exception: " + e.getMessage());
             }
-
         }
 
         @Override
         protected void onPostExecute(String result) {
-            //Toast.makeText(getView().getContext(), result,Toast.LENGTH_LONG).show();
             if(result.equals("1")) {
+                dialog.dismiss();
                 Intent intent = new Intent(LoginActivity.this, MenuActivity.class);
                 startActivity(intent);
                 finish();
             }else{
+                dialog.dismiss();
                 Toast.makeText(LoginActivity.this, "Login gagal",
                         Toast.LENGTH_LONG).show();
             }

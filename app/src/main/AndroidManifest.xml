@@ -17,13 +17,13 @@
             android:name="com.example.telc2.traderstation.activity.LoginActivity"
             android:label="@string/title_activity_dashboard"
             android:theme="@style/AppTheme.NoActionBar">
-
-        </activity>
-        <activity android:name="com.example.telc2.traderstation.activity.MenuActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name="com.example.telc2.traderstation.activity.MenuActivity">
+
         </activity>
         <activity android:name="com.example.telc2.traderstation.activity.ProfilActivity"></activity>
         <activity android:name=".activity.ProfileActivity"/>

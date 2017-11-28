@@ -83,8 +83,9 @@ public class ChattingActivity extends AppCompatActivity {
         mChatView.setSendTimeTextColor(Color.BLACK);
         mChatView.setDateSeparatorColor(Color.BLACK);
         mChatView.setInputTextHint("chat");
-        mChatView.setMessageMarginTop(5);
-        mChatView.setMessageMarginBottom(5);
+        mChatView.setMessageMarginTop(0);
+        mChatView.setMessageMarginBottom(0);
+        mChatView.setDividerPadding(0);
 
         //Click Send Button
         mChatView.setOnClickSendButtonListener(new View.OnClickListener() {
