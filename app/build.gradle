@@ -40,6 +40,7 @@ dependencies {
     compile 'com.github.bassaer:chatmessageview:1.5.5'
     compile 'com.jjoe64:graphview:4.2.1'
     compile 'com.github.PhilJay:MPAndroidChart:v2.2.4'
+    compile 'me.zhanghai.android.materialprogressbar:library:1.4.2'
     testCompile 'junit:junit:4.12'
     compile project(path: ':aFileChooser')
 }

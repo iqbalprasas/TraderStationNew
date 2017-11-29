@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp"
-    android:background="@drawable/bg_blur"
+    android:background="@drawable/bg_trans"
     tools:context="com.example.telc2.traderstation.activity.LoginActivity">
 
     <ImageView
@@ -40,13 +40,13 @@
             android:id="@+id/input_layout_usname"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColorHint="#FFFFFF">
+            android:textColorHint="@color/colorPrimary">
             <EditText
                 android:id="@+id/edt_usname"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif"
-                android:textColor="#FFFFFF"
+                android:textColor="@color/colorPrimaryDark"
                 android:hint="Username"
                 android:inputType="textPersonName" />
         </android.support.design.widget.TextInputLayout>
@@ -59,12 +59,12 @@
             android:id="@+id/input_layout_pswd"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColorHint="#FFFFFF">
+            android:textColorHint="@color/colorPrimary">
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/edt_pswd"
-                android:textColor="#FFFFFF"
+                android:textColor="@color/colorPrimaryDark"
                 android:hint="Password"
                 android:inputType="textPassword"
                 android:fontFamily="sans-serif"/>
@@ -89,7 +89,7 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="don't have an account ? "
-            android:textColor="#FFFFFF"/>
+            android:textColor="@color/colorPrimary"/>
         <TextView
             android:id="@+id/textView3"
             android:layout_width="wrap_content"
@@ -97,7 +97,7 @@
             android:gravity="center"
             android:text=" Sign Up"
             android:textStyle="bold"
-            android:textColor="@color/colorPrimary"/>
+            android:textColor="@color/colorPrimaryDark"/>
     </LinearLayout>
 
 
@@ -113,7 +113,7 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="Forgot password ?"
-            android:textColor="#FFFFFF"/>
+            android:textColor="@color/colorPrimary"/>
     </LinearLayout>
 
     <LinearLayout

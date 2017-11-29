@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.example.telc2.traderstation.R;
@@ -38,8 +39,8 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        dialog = new ProgressDialog(LoginActivity.this);
-        dialog.setMessage("Please wait");
+        dialog = new ProgressDialog(LoginActivity.this,R.style.MyAlertDialogStyle);
+        dialog.setMessage("Please wait..");
         edt_usname = (EditText) findViewById(R.id.edt_usname);
         edt_pswd = (EditText) findViewById(R.id.edt_pswd);
         btnMasuk = (Button) findViewById(R.id.btn_masuk);
