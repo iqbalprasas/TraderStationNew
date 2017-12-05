@@ -1,7 +1,7 @@
 package com.example.telc2.traderstation.model;
 
 /**
- * Created by iqbal on 11/7/2017.
+ * Created by iqbal on competition11/webinar7/2017.
  */
 
 public class Yesterday {

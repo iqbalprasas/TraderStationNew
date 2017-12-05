@@ -94,7 +94,7 @@ public class KotakMasukFragment extends Fragment {
         setuju.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                status = "1";
+                status = "calendar1";
                 new SendPostRequest().execute();
             }
         });

@@ -8,12 +8,14 @@ import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
+import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.SearchView;
 
@@ -36,6 +38,8 @@ public class TimelineFragment extends Fragment implements SearchView.OnQueryText
     private CheckBox checkAll, checkStatus, checkTrading, checkNews,checkArticle, checkAnalysis;
     private Button filter;
     private SearchView searchView;
+    private Toolbar toolbar;
+    private ImageButton searctTt;
 
     public TimelineFragment() {
     }
@@ -48,6 +52,9 @@ public class TimelineFragment extends Fragment implements SearchView.OnQueryText
 
         setHasOptionsMenu(true);
 
+        toolbar = (Toolbar) getActivity().findViewById(R.id.toolbar_menu);
+        searctTt = (ImageButton) toolbar.findViewById(R.id.btn_search_tt);
+
         checkAll = (CheckBox)v.findViewById(R.id.checkBoxAll);
         checkStatus = (CheckBox)v.findViewById(R.id.checkBoxStatus);
         checkTrading = (CheckBox)v.findViewById(R.id.checkBoxTrading);
@@ -55,13 +62,20 @@ public class TimelineFragment extends Fragment implements SearchView.OnQueryText
         checkArticle = (CheckBox)v.findViewById(R.id.checkBoxArticle);
         checkAnalysis = (CheckBox)v.findViewById(R.id.checkBoxAnalysis);
 
-        checkAll.setVisibility(v.INVISIBLE);
-        checkAll.setLayoutParams(new LinearLayout.LayoutParams(0,0));
-        checkStatus.setLayoutParams(new LinearLayout.LayoutParams(0,0));
-        checkTrading.setLayoutParams(new LinearLayout.LayoutParams(0,0));
-        checkNews.setLayoutParams(new LinearLayout.LayoutParams(0,0));
-        checkArticle.setLayoutParams(new LinearLayout.LayoutParams(0,0));
-        checkAnalysis.setLayoutParams(new LinearLayout.LayoutParams(0,0));
+//        checkAll.setVisibility(v.INVISIBLE);
+//        checkAll.setLayoutParams(new LinearLayout.LayoutParams(0,0));
+//        checkStatus.setLayoutParams(new LinearLayout.LayoutParams(0,0));
+//        checkTrading.setLayoutParams(new LinearLayout.LayoutParams(0,0));
+//        checkNews.setLayoutParams(new LinearLayout.LayoutParams(0,0));
+//        checkArticle.setLayoutParams(new LinearLayout.LayoutParams(0,0));
+//        checkAnalysis.setLayoutParams(new LinearLayout.LayoutParams(0,0));
+
+        checkAll.setVisibility(v.GONE);
+        checkStatus.setVisibility(v.GONE);
+        checkTrading.setVisibility(v.GONE);
+        checkNews.setVisibility(v.GONE);
+        checkArticle.setVisibility(v.GONE);
+        checkAnalysis.setVisibility(v.GONE);
 
         filter = (Button)v.findViewById(R.id.button_filter_);
 
@@ -110,22 +124,37 @@ public class TimelineFragment extends Fragment implements SearchView.OnQueryText
         filter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+//                if(checkAll.getVisibility()==v.VISIBLE){
+//                    checkAll.setVisibility(v.INVISIBLE);
+//                    checkAll.setLayoutParams(new LinearLayout.LayoutParams(0,0));
+//                    checkStatus.setLayoutParams(new LinearLayout.LayoutParams(0,0));
+//                    checkTrading.setLayoutParams(new LinearLayout.LayoutParams(0,0));
+//                    checkNews.setLayoutParams(new LinearLayout.LayoutParams(0,0));
+//                    checkArticle.setLayoutParams(new LinearLayout.LayoutParams(0,0));
+//                    checkAnalysis.setLayoutParams(new LinearLayout.LayoutParams(0,0));
+//                }else {
+//                    checkAll.setVisibility(v.VISIBLE);
+//                    checkAll.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT));
+//                    checkStatus.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT));
+//                    checkTrading.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT));
+//                    checkNews.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT));
+//                    checkArticle.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT));
+//                    checkAnalysis.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT));
+//                }
                 if(checkAll.getVisibility()==v.VISIBLE){
-                    checkAll.setVisibility(v.INVISIBLE);
-                    checkAll.setLayoutParams(new LinearLayout.LayoutParams(0,0));
-                    checkStatus.setLayoutParams(new LinearLayout.LayoutParams(0,0));
-                    checkTrading.setLayoutParams(new LinearLayout.LayoutParams(0,0));
-                    checkNews.setLayoutParams(new LinearLayout.LayoutParams(0,0));
-                    checkArticle.setLayoutParams(new LinearLayout.LayoutParams(0,0));
-                    checkAnalysis.setLayoutParams(new LinearLayout.LayoutParams(0,0));
+                    checkAll.setVisibility(v.GONE);
+                    checkStatus.setVisibility(v.GONE);
+                    checkTrading.setVisibility(v.GONE);
+                    checkNews.setVisibility(v.GONE);
+                    checkArticle.setVisibility(v.GONE);
+                    checkAnalysis.setVisibility(v.GONE);
                 }else {
                     checkAll.setVisibility(v.VISIBLE);
-                    checkAll.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT));
-                    checkStatus.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT));
-                    checkTrading.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT));
-                    checkNews.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT));
-                    checkArticle.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT));
-                    checkAnalysis.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT));
+                    checkStatus.setVisibility(v.VISIBLE);
+                    checkTrading.setVisibility(v.VISIBLE);
+                    checkNews.setVisibility(v.VISIBLE);
+                    checkArticle.setVisibility(v.VISIBLE);
+                    checkAnalysis.setVisibility(v.VISIBLE);
                 }
             }
         });
@@ -165,7 +194,7 @@ public class TimelineFragment extends Fragment implements SearchView.OnQueryText
 
     public void loadDataDummy(){
         for (int i = 0;i<10;i++){
-            Timeline timeline = new Timeline("1","","Profile Name","","1 minute ago","lorem ipsum","","","","");
+            Timeline timeline = new Timeline("calendar1","","Profile Name","","calendar1 minute ago","lorem ipsum","","","","");
             timelineList.add(timeline);
             adapterTimeline.notifyDataSetChanged();
         }

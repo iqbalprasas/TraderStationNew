@@ -4,23 +4,28 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.example.telc2.traderstation.R;
+import com.example.telc2.traderstation.activity.ActivityEvent;
 import com.example.telc2.traderstation.activity.TraderPerformance;
 
 /**
- * Created by iqbal on 11/20/2017.
+ * Created by iqbal on 11/back20/2017.
  */
 
 public class MoreFragment extends Fragment{
 
-    Button btnTraderPerformance;
+    Button btnTraderPerformance, btnEvent;
+    private Toolbar toolbar;
+    private ImageButton searctTt;
 
     public MoreFragment() {
     }
@@ -30,12 +35,24 @@ public class MoreFragment extends Fragment{
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View v =  inflater.inflate(R.layout.fragment_more, container, false);
         setHasOptionsMenu(true);
+
+        toolbar = (Toolbar) getActivity().findViewById(R.id.toolbar_menu);
+        searctTt = (ImageButton) toolbar.findViewById(R.id.btn_search_tt);
+
+        btnEvent = (Button)v.findViewById(R.id.btn_more_event);
         btnTraderPerformance = (Button) v.findViewById(R.id.btn_more_trader_performance);
         btnTraderPerformance.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Toast.makeText(v.getContext(), "Trader Performance clicked", Toast.LENGTH_LONG).show();
                 Intent intent = new Intent(v.getContext(), TraderPerformance.class);
+                getActivity().startActivity(intent);
+            }
+        });
+        btnEvent.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(), ActivityEvent.class);
                 getActivity().startActivity(intent);
             }
         });

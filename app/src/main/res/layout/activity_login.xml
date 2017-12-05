@@ -70,13 +70,23 @@
                 android:fontFamily="sans-serif"/>
         </android.support.design.widget.TextInputLayout>
     </LinearLayout>
-    <Button
-        android:id="@+id/btn_masuk"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:weightSum="3"
+        android:paddingTop="8dp">
+    <Button
+        android:id="@+id/btn_masuk"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_login"
+        android:layout_weight="2"
         android:text="Login"
+        android:layout_gravity="center"
         android:textColor="#FFFFFF" />
-
+    </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -117,25 +127,31 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:padding="10dp">
+        android:weightSum="13"
+        android:gravity="center">
 
         <Button
-            android:id="@+id/btn_forgot"
-            android:layout_width="0.0dip"
-            android:layout_height="fill_parent"
-            android:layout_weight="1.0"
-            android:background="@drawable/rsz_facebook"
+            android:id="@+id/btn_fb"
+            android:layout_width="0.0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="6"
+            android:background="@drawable/button_facebook"
             android:textColor="#FFFFFF" />
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1">
 
+        </View>
         <Button
-            android:id="@+id/btn_signup"
+            android:id="@+id/btn_google"
             android:layout_width="0.0dip"
-            android:layout_height="fill_parent"
-            android:layout_weight="1.0"
-            android:background="@drawable/google"
+            android:layout_height="wrap_content"
+            android:layout_weight="6"
+            android:background="@drawable/button_google"
             android:textColor="#FFFFFF" />
     </LinearLayout>
 </LinearLayout>

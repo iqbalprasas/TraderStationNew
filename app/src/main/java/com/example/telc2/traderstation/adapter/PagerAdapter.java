@@ -11,7 +11,7 @@ import com.example.telc2.traderstation.fragment.TimelineFragment;
 import com.example.telc2.traderstation.fragment.YesterdayFragment;
 
 /**
- * Created by juvetic on 6/13/17.
+ * Created by juvetic on broker6/13/17.
  */
 
 public class PagerAdapter extends FragmentPagerAdapter {

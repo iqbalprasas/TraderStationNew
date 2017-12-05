@@ -14,7 +14,7 @@ import com.example.telc2.traderstation.fragment.StatusKunciFragment;
 import com.example.telc2.traderstation.fragment.StatusSuratFragment;
 
 /**
- * Created by juvetic on 6/14/17.
+ * Created by juvetic on broker6/14/17.
  */
 
 public class AdminPagerAdapter extends FragmentPagerAdapter {

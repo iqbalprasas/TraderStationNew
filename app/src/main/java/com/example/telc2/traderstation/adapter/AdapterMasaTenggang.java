@@ -30,7 +30,7 @@ import java.util.List;
 import javax.net.ssl.HttpsURLConnection;
 
 /**
- * Created by iqbal on 8/8/2017.
+ * Created by iqbal on promotion8/promotion8/2017.
  */
 
 public class AdapterMasaTenggang extends RecyclerView.Adapter<AdapterMasaTenggang.HolderData> {

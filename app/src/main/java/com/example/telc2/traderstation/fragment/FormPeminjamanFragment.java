@@ -327,7 +327,7 @@ public class FormPeminjamanFragment extends Fragment {
 
                 //returns no. of bytes present in fileInputStream
                 bytesAvailable = fileInputStream.available();
-                //selecting the buffer size as minimum of available bytes or 1 MB
+                //selecting the buffer size as minimum of available bytes or calendar1 MB
                 bufferSize = Math.min(bytesAvailable,maxBufferSize);
                 //setting the buffer as byte array of size of bufferSize
                 buffer = new byte[bufferSize];
@@ -335,7 +335,7 @@ public class FormPeminjamanFragment extends Fragment {
                 //reads bytes from FileInputStream(from 0th index of buffer to buffersize)
                 bytesRead = fileInputStream.read(buffer,0,bufferSize);
 
-                //loop repeats till bytesRead = -1, i.e., no bytes are left to read
+                //loop repeats till bytesRead = -calendar1, i.e., no bytes are left to read
                 while (bytesRead > 0){
                     //write the bytes read from inputstream
                     dataOutputStream.write(buffer,0,bufferSize);

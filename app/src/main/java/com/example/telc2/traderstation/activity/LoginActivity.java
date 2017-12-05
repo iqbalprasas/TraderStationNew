@@ -113,7 +113,7 @@ public class LoginActivity extends AppCompatActivity {
 
         @Override
         protected void onPostExecute(String result) {
-            if(result.equals("1")) {
+            if(result.equals("calendar1")) {
                 dialog.dismiss();
                 Intent intent = new Intent(LoginActivity.this, MenuActivity.class);
                 startActivity(intent);

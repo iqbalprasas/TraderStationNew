@@ -6,9 +6,13 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.GradientDrawable;
+import android.os.Build;
+import android.support.annotation.RequiresApi;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.TabLayout;
+import android.support.v4.content.ContextCompat;
 import android.support.v4.view.GravityCompat;
+import android.support.v4.view.MenuItemCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -21,6 +25,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -37,6 +42,8 @@ public class MenuActivity extends AppCompatActivity implements NavigationView.On
     private DrawerLayout drawer;
     Toolbar toolbar;
     ViewPager viewPager;
+    ImageButton searchTt;
+    boolean clicked = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +57,23 @@ public class MenuActivity extends AppCompatActivity implements NavigationView.On
         toolbar = (Toolbar) findViewById(R.id.toolbar_menu);
 
         TextView mTitle = (TextView) toolbar.findViewById(R.id.toolbar_title);
+        searchTt = (ImageButton) toolbar.findViewById(R.id.btn_search_tt);
+//        searchTt.setOnClickListener(new View.OnClickListener() {
+//            @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN_MR1)
+//            @Override
+//            public void onClick(View v) {
+//                int icon;
+//                if (clicked) {
+//                    clicked = false;
+//                    icon = R.drawable.ic_close_tt;
+//                }else {
+//                        clicked = true;
+//                        icon = R.drawable.search10;
+//                }
+//                searchTt.setImageDrawable(
+//                        ContextCompat.getDrawable(getApplicationContext(), icon));                }
+//        });
+        searchTt.setVisibility(View.GONE);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
 
@@ -65,15 +89,15 @@ public class MenuActivity extends AppCompatActivity implements NavigationView.On
         tabLayout.addTab(tabLayout.newTab());
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
         //tabLayout.setupWithViewPager(viewPager);
-        tabLayout.getTabAt(0).setIcon(R.drawable.ic_friend);
-        tabLayout.getTabAt(1).setIcon(R.drawable.ic_chat);
-        tabLayout.getTabAt(2).setIcon(R.drawable.ic_timeline);
-        tabLayout.getTabAt(3).setIcon(R.drawable.ic_news);
+        tabLayout.getTabAt(0).setIcon(R.drawable.friends14);
+        tabLayout.getTabAt(1).setIcon(R.drawable.chat13);
+        tabLayout.getTabAt(2).setIcon(R.drawable.timeline4);
+        tabLayout.getTabAt(3).setIcon(R.drawable.more2);
 
         LinearLayout linearLayout = (LinearLayout)tabLayout.getChildAt(0);
         linearLayout.setShowDividers(LinearLayout.SHOW_DIVIDER_MIDDLE);
         GradientDrawable drawable = new GradientDrawable();
-        drawable.setColor(Color.WHITE);
+        drawable.setColor(Color.LTGRAY);
         drawable.setSize(1, 1);
         linearLayout.setDividerPadding(10);
         linearLayout.setDividerDrawable(drawable);
@@ -169,10 +193,13 @@ public class MenuActivity extends AppCompatActivity implements NavigationView.On
         menuInflater.inflate(R.menu.search_menu, menu);
 
         MenuItem searchItem = menu.findItem(R.id.search);
+        SearchView searchView = (SearchView) MenuItemCompat.getActionView(searchItem);
+        ImageView searchIcon = (ImageView)searchView.findViewById(android.support.v7.appcompat.R.id.search_button);
+        searchIcon.setImageResource(R.drawable.search10);
 
         SearchManager searchManager = (SearchManager) MenuActivity.this.getSystemService(Context.SEARCH_SERVICE);
 
-        SearchView searchView = null;
+        searchView = null;
         if (searchItem != null) {
             searchView = (SearchView) searchItem.getActionView();
         }

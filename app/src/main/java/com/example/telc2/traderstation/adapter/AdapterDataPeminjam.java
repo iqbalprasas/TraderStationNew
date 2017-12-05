@@ -12,7 +12,7 @@ import com.example.telc2.traderstation.model.DataPeminjam;
 import java.util.List;
 
 /**
- * Created by iqbal on 8/7/2017.
+ * Created by iqbal on promotion8/webinar7/2017.
  */
 
 public class AdapterDataPeminjam extends RecyclerView.Adapter<AdapterDataPeminjam.HolderData>{

@@ -8,12 +8,14 @@ import android.support.v4.app.Fragment;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.SearchView;
 
 import com.example.telc2.traderstation.R;
@@ -32,6 +34,8 @@ public class ChatFragment extends Fragment{
     private List<Chat> chatList = new ArrayList<>();
     private RecyclerView recyclerView;
     private AdapterChat adapterChat;
+    private Toolbar toolbar;
+    private ImageButton searctTt;
 
     public ChatFragment() {
     }
@@ -42,6 +46,9 @@ public class ChatFragment extends Fragment{
         View v =  inflater.inflate(R.layout.fragment_chat, container, false);
 
         setHasOptionsMenu(true);
+
+        toolbar = (Toolbar) getActivity().findViewById(R.id.toolbar_menu);
+        searctTt = (ImageButton) toolbar.findViewById(R.id.btn_search_tt);
 
         recyclerView = (RecyclerView) v.findViewById(R.id.recyclerChat);
         //dataList = new ArrayList<HashMap<String,String>>();
@@ -57,7 +64,7 @@ public class ChatFragment extends Fragment{
 
     public void loadDataDummy(){
         for (int i = 0;i<10;i++){
-            Chat chat = new Chat("1","","Profile Name","lorem ipsum","999");
+            Chat chat = new Chat("calendar1","","Profile Name","lorem ipsum","999");
             chatList.add(chat);
             adapterChat.notifyDataSetChanged();
         }

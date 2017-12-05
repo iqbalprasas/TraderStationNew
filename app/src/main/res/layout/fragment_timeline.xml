@@ -10,72 +10,85 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:weightSum="6"
-        android:focusableInTouchMode="true">
+        android:weightSum="8"
+        android:focusableInTouchMode="true"
+        android:layout_marginBottom="2dp">
     <SearchView
         android:id="@+id/search_timeline"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:iconifiedByDefault="false"
-        android:layout_weight="5"
+        android:layout_weight="7"
         android:imeOptions="actionSearch"
         android:queryHint="Search Timeline" />
 
         <Button
             android:id="@+id/button_filter_"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@drawable/button_filter_background"
-            android:text=""
+            android:drawableTop="@drawable/ic_filter_white"
+            android:paddingBottom="0dp"
+            android:paddingTop="4dp"
+            android:drawablePadding="0dp"
             android:textColor="#FFFFFF" />
     </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:weightSum="3">
+            android:weightSum="4"
+            android:gravity="center"
+            android:layout_marginBottom="2dp">
             <CheckBox
                 android:id="@+id/checkBoxAll"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:button="@drawable/check_timeline"
                 android:text="All" />
             <CheckBox
                 android:id="@+id/checkBoxNews"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:button="@drawable/check_timeline"
                 android:text="News" />
             <CheckBox
                 android:id="@+id/checkBoxArticle"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:button="@drawable/check_timeline"
                 android:text="Article" />
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:weightSum="3">
+            android:weightSum="4"
+            android:gravity="center"
+            android:layout_marginBottom="2dp">
             <CheckBox
                 android:id="@+id/checkBoxStatus"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:button="@drawable/check_timeline"
                 android:text="Status"/>
             <CheckBox
                 android:id="@+id/checkBoxTrading"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:button="@drawable/check_timeline"
                 android:text="Trading"/>
             <CheckBox
                 android:id="@+id/checkBoxAnalysis"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:button="@drawable/check_timeline"
                 android:text="Analysis"/>
         </LinearLayout>
 

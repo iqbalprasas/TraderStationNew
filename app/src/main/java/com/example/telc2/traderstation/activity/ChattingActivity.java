@@ -26,7 +26,7 @@ import org.w3c.dom.Text;
 import java.util.Random;
 
 /**
- * Created by iqbal on 11/21/2017.
+ * Created by iqbal on competition11/bg_buttong_long21/2017.
  */
 
 public class ChattingActivity extends AppCompatActivity {
@@ -111,7 +111,7 @@ public class ChattingActivity extends AppCompatActivity {
                         .build();
 
                 // This is a demo bot
-                // Return within 3 seconds
+                // Return within event3 seconds
                 int sendDelay = (new Random().nextInt(4) + 1) * 1000;
                 new Handler().postDelayed(new Runnable() {
                     @Override

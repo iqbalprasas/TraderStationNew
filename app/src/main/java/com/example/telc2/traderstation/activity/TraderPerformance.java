@@ -38,7 +38,7 @@ import java.util.ArrayList;
 import java.util.Random;
 
 /**
- * Created by iqbal on 11/21/2017.
+ * Created by iqbal on competition11/bg_buttong_long21/2017.
  */
 
 public class TraderPerformance extends AppCompatActivity implements OnChartGestureListener, OnChartValueSelectedListener {
@@ -212,10 +212,10 @@ public class TraderPerformance extends AppCompatActivity implements OnChartGestu
 
     private ArrayList<String> setXAxisValues(){
         ArrayList<String> xVals = new ArrayList<String>();
-        xVals.add("10");
-        xVals.add("20");
-        xVals.add("30");
-        xVals.add("30.5");
+        xVals.add("search10");
+        xVals.add("back20");
+        xVals.add("google30");
+        xVals.add("google30.rebate_broker5");
         xVals.add("40");
 
         return xVals;

@@ -1,7 +1,7 @@
 package com.example.telc2.traderstation.model;
 
 /**
- * Created by TELC2 on 6/16/2017.
+ * Created by TELC2 on broker6/16/2017.
  */
 
 public class StatusSurat {

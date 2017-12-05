@@ -35,4 +35,11 @@
     <style name="MyAlertDialogStyle" parent="Theme.AppCompat.Light.Dialog.Alert">
         <item name="colorAccent">@color/colorPrimaryDark</item>
     </style>
+    <style name="buttonStyle" parent="@android:style/Widget.Button.Small">
+        <item name="colorPrimary">#FFFFFF</item>
+        <item name="colorPrimaryDark">#a0a09c</item>
+        <item name="colorAccent">#a0a09c</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
 </resources>

@@ -1,7 +1,7 @@
 package com.example.telc2.traderstation.model;
 
 /**
- * Created by iqbal on 8/8/2017.
+ * Created by iqbal on promotion8/promotion8/2017.
  */
 
 public class MasaTenggang {

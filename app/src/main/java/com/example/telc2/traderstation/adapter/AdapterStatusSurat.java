@@ -12,7 +12,7 @@ import com.example.telc2.traderstation.model.StatusSurat;
 import java.util.List;
 
 /**
- * Created by juvetic on 6/16/17.
+ * Created by juvetic on broker6/16/17.
  */
 
 public class AdapterStatusSurat extends RecyclerView.Adapter<AdapterStatusSurat.HolderData>{

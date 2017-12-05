@@ -6,10 +6,12 @@ import android.support.v4.app.Fragment;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 
 import com.example.telc2.traderstation.R;
 import com.example.telc2.traderstation.adapter.AdapterContact;
@@ -27,6 +29,8 @@ public class ContactFragment extends Fragment{
     private List<Contact> contactList = new ArrayList<>();
     private RecyclerView recyclerView;
     private AdapterContact adapterContact;
+    private Toolbar toolbar;
+    private ImageButton searctTt;
 
     public ContactFragment() {
     }
@@ -37,6 +41,9 @@ public class ContactFragment extends Fragment{
         View v =  inflater.inflate(R.layout.fragment_contact, container, false);
 
         setHasOptionsMenu(true);
+
+        toolbar = (Toolbar) getActivity().findViewById(R.id.toolbar_menu);
+        searctTt = (ImageButton) toolbar.findViewById(R.id.btn_search_tt);
 
         recyclerView = (RecyclerView) v.findViewById(R.id.recyclerContact);
         //dataList = new ArrayList<HashMap<String,String>>();
@@ -52,7 +59,7 @@ public class ContactFragment extends Fragment{
 
     public void loadDataDummy(){
         for (int i = 0;i<10;i++){
-            Contact contact = new Contact("1","Profile Name","","lorem ipsum");
+            Contact contact = new Contact("calendar1","Profile Name","","lorem ipsum");
             contactList.add(contact);
             adapterContact.notifyDataSetChanged();
         }

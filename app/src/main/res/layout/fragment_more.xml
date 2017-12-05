@@ -9,152 +9,242 @@
     android:orientation="vertical">
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="88dp"
         android:orientation="horizontal"
         android:padding="8dp"
-        android:weightSum="3">
+        android:weightSum="13">
 
         <Button
             android:id="@+id/btn_more_calendar"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:textColor="#FFFFFF"
-            android:text="Economic Calendar"
+            android:layout_weight="4"
+            android:paddingTop="8dp"
+            android:textColor="#000000"
+            android:background="@drawable/button_more"
+            android:paddingBottom="8dp"
+            android:textSize="12sp"
+            android:text="@string/economic_calendar"
             android:gravity="center"
-            android:drawablePadding="4dp"
-            android:drawableTop="@drawable/ic_calendar"/>
+            android:drawablePadding="8dp"
+            android:drawableTop="@drawable/calendar1"/>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="0.5">
+
+        </View>
         <Button
             android:id="@+id/btn_more_event"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:textColor="#FFFFFF"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:paddingTop="8dp"
+            android:textColor="#000000"
+            android:background="@drawable/button_more"
+            android:paddingBottom="8dp"
             android:text="@string/event"
-            android:drawablePadding="4dp"
-            android:drawableTop="@drawable/ic_calendar"/>
+            android:drawablePadding="8dp"
+            android:drawableTop="@drawable/event3"/>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="0.5">
+
+        </View>
         <Button
             android:id="@+id/btn_more_webinar"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:textColor="#FFFFFF"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:paddingTop="8dp"
+            android:textColor="#000000"
+            android:background="@drawable/button_more"
+            android:paddingBottom="8dp"
             android:text="@string/webinar"
-            android:drawablePadding="4dp"
-            android:drawableTop="@drawable/ic_calendar"/>
+            android:drawablePadding="8dp"
+            android:drawableTop="@drawable/webinar7"/>
     </LinearLayout>
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="88dp"
         android:orientation="horizontal"
         android:padding="8dp"
-        android:weightSum="3">
+        android:weightSum="13">
 
         <Button
             android:id="@+id/btn_more_competition"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:textSize="12sp"
-            android:textColor="#FFFFFF"
+            android:layout_weight="4"
+            android:background="@drawable/button_more"
+            android:drawablePadding="8dp"
+            android:drawableTop="@drawable/friends14"
+            android:paddingBottom="8dp"
+            android:paddingTop="8dp"
             android:text="@string/competition"
-            android:drawablePadding="4dp"
-            android:drawableTop="@drawable/ic_friend"/>
+            android:textColor="#000000"
+            android:textSize="12sp" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="0.5">
+
+        </View>
+
         <Button
             android:id="@+id/btn_more_broker"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:textColor="#FFFFFF"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:background="@drawable/button_more"
+            android:drawablePadding="8dp"
+            android:drawableTop="@drawable/broker6"
+            android:paddingBottom="8dp"
+            android:paddingTop="8dp"
             android:text="@string/broker"
-            android:drawablePadding="4dp"
-            android:drawableTop="@drawable/ic_calendar"/>
+            android:textColor="#000000" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="0.5">
+
+        </View>
+
         <Button
             android:id="@+id/btn_more_rebate"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:textColor="#FFFFFF"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:background="@drawable/button_more"
+            android:drawablePadding="8dp"
+            android:drawableTop="@drawable/rebate_broker5"
+            android:paddingBottom="8dp"
+            android:paddingTop="8dp"
+            android:textSize="12sp"
             android:text="@string/rebate_broker"
-            android:drawablePadding="4dp"
-            android:drawableTop="@drawable/ic_calendar"/>
+            android:textColor="#000000" />
     </LinearLayout>
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="88dp"
         android:orientation="horizontal"
         android:padding="8dp"
-        android:weightSum="3">
+        android:weightSum="13">
 
         <Button
             android:id="@+id/btn_more_trader_performance"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:textColor="#FFFFFF"
+            android:layout_weight="4"
+            android:paddingTop="8dp"
+            android:textColor="#000000"
+            android:background="@drawable/button_more"
+            android:paddingBottom="8dp"
             android:text="@string/trader_performance"
-            android:drawablePadding="4dp"
+            android:drawablePadding="8dp"
             android:textSize="12sp"
-            android:drawableTop="@drawable/ic_friend"/>
+            android:drawableTop="@drawable/trader_performance15"/>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="0.5">
+
+        </View>
         <Button
             android:id="@+id/btn_more_ea_performance"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:textColor="#FFFFFF"
-            android:text="@string/ea_performance"
-            android:drawablePadding="4dp"
+            android:layout_weight="4"
+            android:paddingTop="8dp"
+            android:textColor="#000000"
+            android:background="@drawable/button_more"
+            android:paddingBottom="8dp"
             android:textSize="12sp"
-            android:drawableTop="@drawable/ic_calendar"/>
+            android:text="@string/ea_performance"
+            android:drawablePadding="8dp"
+            android:drawableTop="@drawable/ea_performance19"/>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="0.5">
+
+        </View>
         <Button
             android:id="@+id/btn_more_pamm"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:textColor="#FFFFFF"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:paddingTop="8dp"
+            android:textColor="#000000"
+            android:background="@drawable/button_more"
+            android:paddingBottom="8dp"
             android:text="@string/pamm"
-            android:drawablePadding="4dp"
-            android:drawableTop="@drawable/ic_calendar"/>
+            android:drawablePadding="8dp"
+            android:drawableTop="@drawable/pamm18"/>
     </LinearLayout>
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="88dp"
         android:orientation="horizontal"
         android:padding="8dp"
-        android:weightSum="3">
+        android:weightSum="13">
 
         <Button
             android:id="@+id/btn_more_gallery"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:textColor="#FFFFFF"
+            android:layout_weight="4"
+            android:paddingTop="8dp"
+            android:textColor="#000000"
+            android:background="@drawable/button_more"
+            android:paddingBottom="8dp"
             android:text="@string/gallery"
-            android:drawablePadding="4dp"
+            android:drawablePadding="8dp"
             android:textSize="12sp"
-            android:drawableTop="@drawable/ic_friend"/>
+            android:drawableTop="@drawable/gallery16"/>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="0.5">
+
+        </View>
         <Button
             android:id="@+id/btn_more_promotion"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:textColor="#FFFFFF"
+            android:layout_weight="4"
+            android:paddingTop="8dp"
+            android:textColor="#000000"
+            android:background="@drawable/button_more"
+            android:paddingBottom="8dp"
             android:text="@string/promotion"
-            android:drawablePadding="4dp"
+            android:drawablePadding="8dp"
             android:textSize="12sp"
-            android:drawableTop="@drawable/ic_calendar"/>
+            android:drawableTop="@drawable/promotion8"/>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="0.5">
+
+        </View>
         <Button
             android:id="@+id/btn_more_shop"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:textColor="#FFFFFF"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:paddingTop="8dp"
+            android:textColor="#000000"
+            android:background="@drawable/button_more"
+            android:paddingBottom="8dp"
             android:text="@string/shop"
-            android:drawablePadding="4dp"
-            android:drawableTop="@drawable/ic_calendar"/>
+            android:drawablePadding="8dp"
+            android:drawableTop="@drawable/shop17"/>
     </LinearLayout>
 </LinearLayout>
 </ScrollView>

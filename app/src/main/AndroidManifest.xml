@@ -39,6 +39,7 @@
         </activity>
         <activity android:name=".activity.ChattingActivity"/>
         <activity android:name=".activity.TraderPerformance"/>
+        <activity android:name=".activity.ActivityEvent"/>
     </application>
 
 </manifest>

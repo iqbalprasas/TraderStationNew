@@ -12,7 +12,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 /**
- * Created by iqbal on 11/7/2017.
+ * Created by iqbal on 11/webinar7/2017.
  */
 
 public class DrawerItemAdapter extends ArrayAdapter<DataDrawer>{
