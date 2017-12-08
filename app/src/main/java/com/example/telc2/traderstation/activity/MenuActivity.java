@@ -6,11 +6,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.GradientDrawable;
-import android.os.Build;
-import android.support.annotation.RequiresApi;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.TabLayout;
-import android.support.v4.content.ContextCompat;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.view.MenuItemCompat;
 import android.support.v4.view.ViewPager;
@@ -20,22 +17,17 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.SearchView;
 import android.support.v7.widget.Toolbar;
-import android.text.InputType;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.telc2.traderstation.R;
 import com.example.telc2.traderstation.adapter.PagerAdapter;
-import com.example.telc2.traderstation.formatter.SearchViewFormatter;
 
 public class MenuActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -76,6 +68,7 @@ public class MenuActivity extends AppCompatActivity implements NavigationView.On
         searchTt.setVisibility(View.GONE);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
+        getSupportActionBar().setHomeAsUpIndicator(R.drawable.leftarrow);
 
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolbar,
                 R.string.navigation_drawer_open, R.string.navigation_drawer_close);
@@ -145,7 +138,16 @@ public class MenuActivity extends AppCompatActivity implements NavigationView.On
 
             @Override
             public void onTabReselected(TabLayout.Tab tab) {
-
+                //FragmentManager fm = getSupportFragmentManager();
+                //Fragment f = adapter.getItem(1);
+//                if(viewPager.getCurrentItem()==1) {
+//                    if (f != null) {
+//                        Toast.makeText(MenuActivity.this, "tab clicked  ",
+//                                Toast.LENGTH_LONG).show();
+//                        cf.loadDataDummy();
+//                        //cf.getRecyclerView().smoothScrollToPosition(0);
+//                    }
+//                }
             }
         });
     }
@@ -158,7 +160,6 @@ public class MenuActivity extends AppCompatActivity implements NavigationView.On
             viewPager.setCurrentItem(0);
         } else if (id == R.id.fr2) {
             Intent intent = new Intent(this, ProfileActivity.class);
-            intent.putExtra("string", "Go to other Activity by NavigationView item cliked!");
             startActivity(intent);
         } else if (id == R.id.fr3) {
             viewPager.setCurrentItem(2);

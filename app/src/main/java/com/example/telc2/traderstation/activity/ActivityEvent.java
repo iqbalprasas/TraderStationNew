@@ -11,7 +11,7 @@ import android.widget.ImageButton;
 import android.widget.ProgressBar;
 
 import com.example.telc2.traderstation.R;
-import com.example.telc2.traderstation.formatter.MyWebViewClient;
+import com.example.telc2.traderstation.config.MyWebViewClient;
 
 /**
  * Created by iqbal on 12/5/2017.

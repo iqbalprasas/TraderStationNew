@@ -16,6 +16,7 @@ import android.widget.Toast;
 import com.example.telc2.traderstation.R;
 import com.example.telc2.traderstation.activity.ActivityEvent;
 import com.example.telc2.traderstation.activity.TraderPerformance;
+import com.example.telc2.traderstation.activity.WebinarActivity;
 
 /**
  * Created by iqbal on 11/back20/2017.
@@ -23,7 +24,7 @@ import com.example.telc2.traderstation.activity.TraderPerformance;
 
 public class MoreFragment extends Fragment{
 
-    Button btnTraderPerformance, btnEvent;
+    Button btnTraderPerformance, btnEvent, btnWebinar;
     private Toolbar toolbar;
     private ImageButton searctTt;
 
@@ -41,6 +42,7 @@ public class MoreFragment extends Fragment{
 
         btnEvent = (Button)v.findViewById(R.id.btn_more_event);
         btnTraderPerformance = (Button) v.findViewById(R.id.btn_more_trader_performance);
+        btnWebinar = (Button) v.findViewById(R.id.btn_more_webinar);
         btnTraderPerformance.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -53,6 +55,13 @@ public class MoreFragment extends Fragment{
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(v.getContext(), ActivityEvent.class);
+                getActivity().startActivity(intent);
+            }
+        });
+        btnWebinar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(), WebinarActivity.class);
                 getActivity().startActivity(intent);
             }
         });

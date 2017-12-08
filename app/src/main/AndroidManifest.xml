@@ -40,6 +40,8 @@
         <activity android:name=".activity.ChattingActivity"/>
         <activity android:name=".activity.TraderPerformance"/>
         <activity android:name=".activity.ActivityEvent"/>
+        <activity android:name=".activity.WebinarActivity"/>
+        <activity android:name=".activity.WebinarSelectedActivity"/>
     </application>
 
 </manifest>

@@ -3,6 +3,7 @@ package com.example.telc2.traderstation.fragment;
 import android.app.SearchManager;
 import android.content.Context;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.DefaultItemAnimator;
@@ -64,7 +65,7 @@ public class ChatFragment extends Fragment{
 
     public void loadDataDummy(){
         for (int i = 0;i<10;i++){
-            Chat chat = new Chat("calendar1","","Profile Name","lorem ipsum","999");
+            Chat chat = new Chat("1","","Profile Name","lorem ipsum","999");
             chatList.add(chat);
             adapterChat.notifyDataSetChanged();
         }
@@ -87,5 +88,19 @@ public class ChatFragment extends Fragment{
     public void onPrepareOptionsMenu(Menu menu) {
         menu.findItem(R.id.search).setVisible(true);
         super.onPrepareOptionsMenu(menu);
+    }
+
+    public RecyclerView getRecyclerView() {
+        return recyclerView;
+    }
+
+    public void setListToTop(){
+        //((LinearLayoutManager) recyclerView.getLayoutManager()).scrollToPosition(0);
+//        new Handler().postDelayed(new Runnable() {
+//            @Override
+//            public void run() {
+//                recyclerView.scrollToPosition(chatList.size()-1);
+//            }
+//        }, 200);
     }
 }

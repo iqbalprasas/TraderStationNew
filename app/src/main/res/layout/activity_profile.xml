@@ -22,9 +22,10 @@
 
             <ImageView
                 android:id="@+id/imageView3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:srcCompat="@drawable/logo_ts" />
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginRight="4dp"
+                app:srcCompat="@drawable/ts_putih_1" />
 
             <TextView
                 android:layout_width="wrap_content"

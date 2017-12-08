@@ -23,7 +23,7 @@ public class ProfileActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
 
-        toolbar.setNavigationIcon(R.drawable.ic_back);
+        toolbar.setNavigationIcon(R.drawable.leftarrow);
 
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override

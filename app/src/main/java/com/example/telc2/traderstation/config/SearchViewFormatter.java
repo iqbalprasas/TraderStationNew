@@ -1,4 +1,4 @@
-package com.example.telc2.traderstation.formatter;
+package com.example.telc2.traderstation.config;
 
 import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
@@ -10,9 +10,6 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.support.v7.widget.SearchView;
 import android.widget.TextView;
-
-import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
 
 public class SearchViewFormatter {
 

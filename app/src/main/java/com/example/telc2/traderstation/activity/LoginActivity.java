@@ -60,7 +60,7 @@ public class LoginActivity extends AppCompatActivity {
         protected String doInBackground(String... arg0) {
 
             try {
-                URL url = new URL(getString(R.string.server));
+                URL url = new URL("http://servicetrader.mawblanja.com/login_android.php");
 
                 JSONObject postDataParams = new JSONObject();
                 postDataParams.put("un", edt_usname.getText().toString());
@@ -113,7 +113,7 @@ public class LoginActivity extends AppCompatActivity {
 
         @Override
         protected void onPostExecute(String result) {
-            if(result.equals("calendar1")) {
+            if(result.equals("1")) {
                 dialog.dismiss();
                 Intent intent = new Intent(LoginActivity.this, MenuActivity.class);
                 startActivity(intent);

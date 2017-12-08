@@ -26,13 +26,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@color/colorPrimary"
-                app:srcCompat="@drawable/ic_back" />
+                android:layout_marginRight="16dp"
+                app:srcCompat="@drawable/leftarrow" />
 
             <ImageView
                 android:id="@+id/imageView3_tp"
                 android:layout_width="36dp"
                 android:layout_height="wrap_content"
-                android:layout_margin="4dp"
+                android:layout_marginRight="4dp"
                 app:srcCompat="@drawable/ts_putih_1" />
 
             <TextView

@@ -1,4 +1,4 @@
-package com.example.telc2.traderstation.formatter;
+package com.example.telc2.traderstation.config;
 
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
