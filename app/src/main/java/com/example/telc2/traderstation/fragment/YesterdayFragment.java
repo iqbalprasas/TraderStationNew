@@ -152,7 +152,7 @@ public class YesterdayFragment extends Fragment {
 
     public void loadDataDummy(){
         for (int i = 0;i<10;i++){
-            Yesterday yesterday = new Yesterday("1h 22m","Consumer Confidence","high","calendar1%","0.rebate_broker5%","0.calendar1%","IDN","IDR");
+            Yesterday yesterday = new Yesterday("1h 15m","Sevices PMI",50,"52.9","52.4","52.4","","IDR");
             yesterdayList.add(yesterday);
             adapterYesterday.notifyDataSetChanged();
         }

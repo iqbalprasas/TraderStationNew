@@ -14,7 +14,8 @@ import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.example.telc2.traderstation.R;
-import com.example.telc2.traderstation.activity.ActivityEvent;
+import com.example.telc2.traderstation.activity.CalendarActivity;
+import com.example.telc2.traderstation.activity.EventActivity;
 import com.example.telc2.traderstation.activity.TraderPerformance;
 import com.example.telc2.traderstation.activity.WebinarActivity;
 
@@ -24,7 +25,7 @@ import com.example.telc2.traderstation.activity.WebinarActivity;
 
 public class MoreFragment extends Fragment{
 
-    Button btnTraderPerformance, btnEvent, btnWebinar;
+    Button btnTraderPerformance, btnEvent, btnWebinar, btnCalendar;
     private Toolbar toolbar;
     private ImageButton searctTt;
 
@@ -43,6 +44,7 @@ public class MoreFragment extends Fragment{
         btnEvent = (Button)v.findViewById(R.id.btn_more_event);
         btnTraderPerformance = (Button) v.findViewById(R.id.btn_more_trader_performance);
         btnWebinar = (Button) v.findViewById(R.id.btn_more_webinar);
+        btnCalendar = (Button) v.findViewById(R.id.btn_more_calendar);
         btnTraderPerformance.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -54,7 +56,7 @@ public class MoreFragment extends Fragment{
         btnEvent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(v.getContext(), ActivityEvent.class);
+                Intent intent = new Intent(v.getContext(), EventActivity.class);
                 getActivity().startActivity(intent);
             }
         });
@@ -62,6 +64,13 @@ public class MoreFragment extends Fragment{
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(v.getContext(), WebinarActivity.class);
+                getActivity().startActivity(intent);
+            }
+        });
+        btnCalendar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(), CalendarActivity.class);
                 getActivity().startActivity(intent);
             }
         });

@@ -71,6 +71,7 @@ public class AdapterWebinar extends RecyclerView.Adapter<AdapterWebinar.HolderDa
             Context context = view.getContext();
             Intent intent = new Intent(context, WebinarSelectedActivity.class);
             intent.putExtra("title", txTitle.getText().toString());
+            intent.putExtra("desc", txDesc.getText().toString());
             context.startActivity(intent);
         }
     }

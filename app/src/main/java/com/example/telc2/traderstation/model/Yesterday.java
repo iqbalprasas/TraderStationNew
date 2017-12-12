@@ -5,9 +5,10 @@ package com.example.telc2.traderstation.model;
  */
 
 public class Yesterday {
-    private String time, name, rate, act, cons, prev, nation, currency;
+    private String time, name, act, cons, prev, nation, currency;
+    private int rate;
 
-    public Yesterday(String time, String name, String rate, String act, String cons, String prev, String nation, String currency) {
+    public Yesterday(String time, String name, int rate, String act, String cons, String prev, String nation, String currency) {
         this.time = time;
         this.name = name;
         this.rate = rate;
@@ -34,11 +35,11 @@ public class Yesterday {
         this.name = name;
     }
 
-    public String getRate() {
+    public int getRate() {
         return rate;
     }
 
-    public void setRate(String rate) {
+    public void setRate(int rate) {
         this.rate = rate;
     }
 

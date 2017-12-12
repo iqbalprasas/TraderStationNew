@@ -17,7 +17,7 @@ import com.example.telc2.traderstation.config.MyWebViewClient;
  * Created by iqbal on 12/5/2017.
  */
 
-public class ActivityEvent extends AppCompatActivity {
+public class EventActivity extends AppCompatActivity {
 
     WebView webView;
     Toolbar toolbar;
