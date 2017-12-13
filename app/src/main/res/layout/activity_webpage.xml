@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -5,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
     <android.support.v7.widget.Toolbar
-        android:id="@+id/toolbar_event"
+        android:id="@+id/toolbar_webpage"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:background="?attr/colorPrimary"
@@ -19,7 +20,7 @@
             android:gravity="center">
 
             <ImageButton
-                android:id="@+id/btn_back_event"
+                android:id="@+id/btn_back_webpage"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@color/colorPrimary"
@@ -29,44 +30,36 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Event"
+                android:text="WebPage"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 android:textColor="@android:color/white"
-                android:id="@+id/toolbar_title_event" />
+                android:id="@+id/toolbar_title_webpage" />
         </LinearLayout>
     </android.support.v7.widget.Toolbar>
-    <View
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@android:color/white"/>
+        android:layout_height="wrap_content">
+        <me.zhanghai.android.materialprogressbar.MaterialProgressBar
+            android:id="@+id/progress_webpage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:indeterminate="false"
+            android:layout_gravity="bottom"
+            app:mpb_useIntrinsicPadding="false"
+            app:mpb_showProgressBackground="false"
+            app:mpb_progressStyle="horizontal"
+            app:mpb_indeterminateTint="@color/colorPrimary"
+            style="@style/Widget.MaterialProgressBar.ProgressBar.Horizontal.NoPadding" />
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="match_parent">
 
-        <android.support.design.widget.TabLayout
-            android:id="@+id/tab_layout_event"
+        <WebView
+            android:id="@+id/web_webpage"
             android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:layout_below="@+id/toolbar_event"
-            android:background="?attr/colorPrimary"
-            android:minHeight="?attr/actionBarSize"
-            app:tabBackground="@drawable/tab_colour_2"
-            app:tabIndicatorColor="#a0a09c"
-            app:tabMode="scrollable"
-            app:tabMaxWidth="0dp"
-            app:tabGravity="fill"
-            app:paddingStart="-1dp"
-            app:paddingEnd="-1dp"
-            app:tabIndicatorHeight="4dp"
-            app:tabTextColor="#d1d1d1"
-            app:tabSelectedTextColor="#FFFFFF"/>
-
-        <android.support.v4.view.ViewPager
-            android:id="@+id/view_pager_event"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="match_parent" />
     </LinearLayout>
 </LinearLayout>

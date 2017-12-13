@@ -15,7 +15,9 @@ import android.widget.Toast;
 
 import com.example.telc2.traderstation.R;
 import com.example.telc2.traderstation.activity.CalendarActivity;
+import com.example.telc2.traderstation.activity.CompetitionActivity;
 import com.example.telc2.traderstation.activity.EventActivity;
+import com.example.telc2.traderstation.activity.WebPageActivity;
 import com.example.telc2.traderstation.activity.TraderPerformance;
 import com.example.telc2.traderstation.activity.WebinarActivity;
 
@@ -25,7 +27,7 @@ import com.example.telc2.traderstation.activity.WebinarActivity;
 
 public class MoreFragment extends Fragment{
 
-    Button btnTraderPerformance, btnEvent, btnWebinar, btnCalendar;
+    Button btnTraderPerformance, btnEvent, btnWebinar, btnCalendar, btnCompetition;
     private Toolbar toolbar;
     private ImageButton searctTt;
 
@@ -45,6 +47,8 @@ public class MoreFragment extends Fragment{
         btnTraderPerformance = (Button) v.findViewById(R.id.btn_more_trader_performance);
         btnWebinar = (Button) v.findViewById(R.id.btn_more_webinar);
         btnCalendar = (Button) v.findViewById(R.id.btn_more_calendar);
+        btnCompetition = (Button) v.findViewById(R.id.btn_more_competition);
+
         btnTraderPerformance.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -71,6 +75,13 @@ public class MoreFragment extends Fragment{
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(v.getContext(), CalendarActivity.class);
+                getActivity().startActivity(intent);
+            }
+        });
+        btnCompetition.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(), CompetitionActivity.class);
                 getActivity().startActivity(intent);
             }
         });

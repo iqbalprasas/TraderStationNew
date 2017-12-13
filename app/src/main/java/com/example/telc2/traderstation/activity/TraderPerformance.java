@@ -62,8 +62,6 @@ public class TraderPerformance extends AppCompatActivity implements OnChartGestu
         setContentView(R.layout.activity_trader_performance);
 
         toolbar = (Toolbar) findViewById(R.id.toolbar_tp);
-        setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayShowTitleEnabled(false);
         back = (ImageButton)toolbar.findViewById(R.id.btn_back_tp);
         back.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -75,6 +73,8 @@ public class TraderPerformance extends AppCompatActivity implements OnChartGestu
         GraphView graph2 = (GraphView) findViewById(R.id.graph_tp);
         mSeries2 = new LineGraphSeries<>();
         mSeriesLimit = new LineGraphSeries<>();
+        mSeries2.setColor(R.color.colorPrimary);
+        mSeriesLimit.setColor(Color.RED);
         graph2.addSeries(mSeries2);
         graph2.addSeries(mSeriesLimit);
         graph2.getViewport().setXAxisBoundsManual(true);

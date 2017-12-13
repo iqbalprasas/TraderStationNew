@@ -6,9 +6,10 @@ package com.example.telc2.traderstation.model;
 
 public class Yesterday {
     private String time, name, act, cons, prev, nation, currency;
-    private int rate;
+    private int id,rate;
 
-    public Yesterday(String time, String name, int rate, String act, String cons, String prev, String nation, String currency) {
+    public Yesterday(int id, String time, String name, int rate, String act, String cons, String prev, String nation, String currency) {
+        this.id = id;
         this.time = time;
         this.name = name;
         this.rate = rate;
@@ -17,6 +18,14 @@ public class Yesterday {
         this.prev = prev;
         this.nation = nation;
         this.currency = currency;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getTime() {
