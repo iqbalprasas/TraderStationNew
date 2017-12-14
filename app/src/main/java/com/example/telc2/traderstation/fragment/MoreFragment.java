@@ -17,8 +17,7 @@ import com.example.telc2.traderstation.R;
 import com.example.telc2.traderstation.activity.CalendarActivity;
 import com.example.telc2.traderstation.activity.CompetitionActivity;
 import com.example.telc2.traderstation.activity.EventActivity;
-import com.example.telc2.traderstation.activity.WebPageActivity;
-import com.example.telc2.traderstation.activity.TraderPerformance;
+import com.example.telc2.traderstation.activity.TraderPerformanceActvity;
 import com.example.telc2.traderstation.activity.WebinarActivity;
 
 /**
@@ -52,8 +51,7 @@ public class MoreFragment extends Fragment{
         btnTraderPerformance.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(v.getContext(), "Trader Performance clicked", Toast.LENGTH_LONG).show();
-                Intent intent = new Intent(v.getContext(), TraderPerformance.class);
+                Intent intent = new Intent(v.getContext(), TraderPerformanceActvity.class);
                 getActivity().startActivity(intent);
             }
         });

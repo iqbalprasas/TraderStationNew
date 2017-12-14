@@ -8,4 +8,11 @@
     <dimen name="img_pp_comp">48dp</dimen>
     <dimen name="height_button_event">88dp</dimen>
     <dimen name="height_btn_padding_event">8dp</dimen>
+    <dimen name="heighy_text_bold_tp">14sp</dimen>
+    <dimen name="height_graph_tp">72dp</dimen>
+    <dimen name="margin_top_line_tp">2dp</dimen>
+    <dimen name="font_reverse_tp">7sp</dimen>
+    <dimen name="font_desc_tp">12sp</dimen>
+    <dimen name="height_desc_tp">40dp</dimen>
+    <dimen name="widht_side_button_tp">59dp</dimen>
 </resources>

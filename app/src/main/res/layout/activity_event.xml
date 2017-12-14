@@ -61,8 +61,8 @@
             app:paddingStart="-1dp"
             app:paddingEnd="-1dp"
             app:tabIndicatorHeight="4dp"
-            app:tabTextColor="#d1d1d1"
-            app:tabSelectedTextColor="#FFFFFF"/>
+            app:tabTextColor="@color/colorPrimary"
+            app:tabSelectedTextColor="@color/colorPrimaryDark"/>
 
         <android.support.v4.view.ViewPager
             android:id="@+id/view_pager_event"

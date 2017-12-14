@@ -37,7 +37,7 @@
                 android:resource="@xml/searchable" />
         </activity>
         <activity android:name=".activity.ChattingActivity"/>
-        <activity android:name=".activity.TraderPerformance"/>
+        <activity android:name=".activity.TraderPerformanceActvity"/>
         <activity android:name=".activity.WebPageActivity"/>
         <activity android:name=".activity.WebinarActivity"/>
         <activity android:name=".activity.WebinarSelectedActivity"/>
