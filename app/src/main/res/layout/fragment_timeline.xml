@@ -34,6 +34,11 @@
             android:drawablePadding="0dp"
             android:textColor="#FFFFFF" />
     </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/layout_filter">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -92,6 +97,7 @@
                 android:button="@drawable/check_timeline"
                 android:text="Analysis"/>
         </LinearLayout>
+    </LinearLayout>
 
     <FrameLayout
         android:layout_width="match_parent"

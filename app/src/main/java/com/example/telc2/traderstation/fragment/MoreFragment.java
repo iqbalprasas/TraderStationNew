@@ -14,9 +14,11 @@ import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.example.telc2.traderstation.R;
+import com.example.telc2.traderstation.activity.BrokerActivity;
 import com.example.telc2.traderstation.activity.CalendarActivity;
 import com.example.telc2.traderstation.activity.CompetitionActivity;
 import com.example.telc2.traderstation.activity.EventActivity;
+import com.example.telc2.traderstation.activity.RebateBrokerActivity;
 import com.example.telc2.traderstation.activity.TraderPerformanceActvity;
 import com.example.telc2.traderstation.activity.WebinarActivity;
 
@@ -26,7 +28,8 @@ import com.example.telc2.traderstation.activity.WebinarActivity;
 
 public class MoreFragment extends Fragment{
 
-    Button btnTraderPerformance, btnEvent, btnWebinar, btnCalendar, btnCompetition;
+    Button btnTraderPerformance, btnEvent, btnWebinar, btnCalendar, btnCompetition,
+            btnRebateBroker, btnBroker;
     private Toolbar toolbar;
     private ImageButton searctTt;
 
@@ -47,6 +50,8 @@ public class MoreFragment extends Fragment{
         btnWebinar = (Button) v.findViewById(R.id.btn_more_webinar);
         btnCalendar = (Button) v.findViewById(R.id.btn_more_calendar);
         btnCompetition = (Button) v.findViewById(R.id.btn_more_competition);
+        btnRebateBroker = (Button) v.findViewById(R.id.btn_more_rebate);
+        btnBroker = (Button) v.findViewById(R.id.btn_more_broker);
 
         btnTraderPerformance.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -80,6 +85,20 @@ public class MoreFragment extends Fragment{
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(v.getContext(), CompetitionActivity.class);
+                getActivity().startActivity(intent);
+            }
+        });
+        btnRebateBroker.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(), RebateBrokerActivity.class);
+                getActivity().startActivity(intent);
+            }
+        });
+        btnBroker.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(), BrokerActivity.class);
                 getActivity().startActivity(intent);
             }
         });

@@ -45,6 +45,9 @@
         <activity android:name=".activity.ECSelectedActivity"/>
         <activity android:name=".activity.CompetitionActivity"/>
         <activity android:name=".activity.EventActivity"/>
+        <activity android:name=".activity.RebateBrokerActivity"/>
+        <activity android:name=".activity.BrokerActivity"/>
+        <activity android:name=".activity.ReviewBrokerActivity"/>
     </application>
 
 </manifest>
