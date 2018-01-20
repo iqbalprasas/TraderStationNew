@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_album_selected"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark" >
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <ImageButton
+                android:id="@+id/btn_back_album_selected"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:layout_marginRight="16dp"
+                app:srcCompat="@drawable/leftarrow" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:id="@+id/toolbar_title_album_selected" />
+        </LinearLayout>
+    </android.support.v7.widget.Toolbar>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lorem Ipsum"
+                android:textColor="#000"
+                android:background="@drawable/shape_desc_gallery"
+                android:textSize="18sp"
+                android:paddingLeft="24dp"
+                android:paddingRight="24dp"
+                android:layout_marginBottom="8dp"
+                android:textStyle="bold"
+                android:layout_gravity="center" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="4dp"
+                android:background="@drawable/shape_desc_gallery">
+                <com.daimajia.slider.library.SliderLayout
+                    android:id="@+id/slider_album_selected"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_marginBottom="8dp"
+                    />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="0dp"
+                    android:weightSum="6">
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_weight="1"
+                        android:layout_marginRight="4dp"
+                        android:src="@drawable/profile"
+                        android:id="@+id/img_profile_gallery"/>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"
+                        android:gravity="center_vertical"
+                        android:text="User"
+                        android:textSize="18sp"
+                        android:textColor="#fff"
+                        android:textStyle="bold"
+                        android:id="@+id/tx_name_gallery"/>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:gravity="top|right"
+                        android:text="20 minutes ago"
+                        android:textSize="12sp"
+                        android:textColor="#fff"
+                        android:textStyle="bold"
+                        android:id="@+id/tx_time_gallery"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Lorem Ipsum Dolor Sit Amet"
+                        android:gravity="center"
+                        android:textSize="18sp"
+                        android:textColor="#000"
+                        android:textStyle="bold"
+                        android:id="@+id/tx_title_gallery"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras maximus leo eget laoreet tempus. Suspendisse quis consequat purus, a aliquet dolor."
+                        android:gravity="center"
+                        android:layout_marginBottom="4dp"
+                        android:textColor="#000"
+                        android:id="@+id/tx_desc_gallery"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

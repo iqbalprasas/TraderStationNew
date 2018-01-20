@@ -20,13 +20,6 @@
             android:orientation="horizontal"
             android:gravity="center">
 
-            <ImageView
-            android:id="@+id/imageView3_profile"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_margin="4dp"
-            app:srcCompat="@drawable/ts_putih_1" />
-
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -54,11 +47,6 @@
         </LinearLayout>
     </android.support.v7.widget.Toolbar>
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@android:color/white"/>
-
     <android.support.v4.widget.DrawerLayout
         android:id="@+id/drawerLayout"
         android:layout_width="match_parent"
@@ -72,18 +60,17 @@
             <android.support.design.widget.TabLayout
                 android:id="@+id/tab_layout_menu"
                 android:layout_width="match_parent"
-                android:layout_height="48dp"
+                android:layout_height="wrap_content"
                 android:layout_below="@+id/toolbar_menu"
-                android:background="#FFFFFF"
                 android:minHeight="?attr/actionBarSize"
                 app:tabBackground="@drawable/tab_colour_2"
-                app:tabIndicatorColor="#a0a09c"
+                app:tabIndicatorColor="#fff"
                 app:tabMode="fixed"
                 app:tabMaxWidth="0dp"
                 app:tabGravity="fill"
                 app:paddingStart="-1dp"
                 app:paddingEnd="-1dp"
-                app:tabIndicatorHeight="4dp"
+                app:tabIndicatorHeight="2dp"
                 app:tabTextColor="#d1d1d1"
                 app:tabSelectedTextColor="#FFFFFF"/>
 

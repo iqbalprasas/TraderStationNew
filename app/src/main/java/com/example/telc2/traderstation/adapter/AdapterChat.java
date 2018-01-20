@@ -38,7 +38,6 @@ public class AdapterChat extends RecyclerView.Adapter<AdapterChat.HolderData>{
     @Override
     public void onBindViewHolder(HolderData holder, int position) {
         Chat chat = chatList.get(position);
-        holder.txIdChat.setText(chat.getId());
         holder.txChat.setText(chat.getChat());
         //holder.txProfilePhoto
         holder.txProfileName.setText(chat.getProfileName());
@@ -61,10 +60,8 @@ public class AdapterChat extends RecyclerView.Adapter<AdapterChat.HolderData>{
         public HolderData(View itemView) {
             super(itemView);
             itemView.setOnClickListener(this);
-            txIdChat = (TextView) itemView.findViewById(R.id.id_id_chat);
             txChat = (TextView) itemView.findViewById(R.id.highlight_profile_chat);
             txProfileName = (TextView) itemView.findViewById(R.id.name_profile_chat);
-            txProfilePhoto = (ImageView) itemView.findViewById(R.id.img_profile_chat);
             txNumChat = (TextView) itemView.findViewById(R.id.num_profile_chat);
         }
 

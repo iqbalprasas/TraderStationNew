@@ -5,6 +5,8 @@ import android.content.Context;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.Nullable;
+import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
@@ -50,6 +52,15 @@ public class ChatFragment extends Fragment{
 
         toolbar = (Toolbar) getActivity().findViewById(R.id.toolbar_menu);
         searctTt = (ImageButton) toolbar.findViewById(R.id.btn_search_tt);
+
+        FloatingActionButton fab = (FloatingActionButton) v.findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Snackbar.make(view, "New chat", Snackbar.LENGTH_LONG)
+                        .setAction("Select", null).show();
+            }
+        });
 
         recyclerView = (RecyclerView) v.findViewById(R.id.recyclerChat);
         //dataList = new ArrayList<HashMap<String,String>>();

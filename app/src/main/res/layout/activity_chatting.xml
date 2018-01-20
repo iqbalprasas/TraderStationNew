@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
+    android:background="#000"
     android:layout_height="match_parent">
 
     <android.support.v7.widget.Toolbar
@@ -41,6 +42,12 @@
     <com.github.bassaer.chatmessageview.views.ChatView
         android:id="@+id/chat_view"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_sub_chat"
+        app:message_font_size="12sp"
+        app:date_separator_font_size="12sp"
+        app:time_label_font_size="12sp"
+        app:username_font_size="12sp"
+        style="@style/tes"/>
 
 </LinearLayout>

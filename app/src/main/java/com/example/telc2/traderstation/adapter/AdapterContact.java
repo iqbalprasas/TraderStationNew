@@ -34,7 +34,6 @@ public class AdapterContact extends RecyclerView.Adapter<AdapterContact.HolderDa
     @Override
     public void onBindViewHolder(HolderData holder, int position) {
         Contact contact = contactList.get(position);
-        holder.txIdContact.setText(contact.getIdContact());
         holder.txContactName.setText(contact.getContactName());
         //holder.txContactPhoto
         holder.txContactStatus.setText(contact.getContactStatus());
@@ -54,10 +53,8 @@ public class AdapterContact extends RecyclerView.Adapter<AdapterContact.HolderDa
 
         public HolderData(View itemView) {
             super(itemView);
-            txIdContact = (TextView) itemView.findViewById(R.id.id_id_contact);
             txContactName = (TextView) itemView.findViewById(R.id.name_profile_contact);
             txContactStatus = (TextView) itemView.findViewById(R.id.status_profile_contact);
-            txContactPhoto = (ImageView) itemView.findViewById(R.id.img_profile_contact);
         }
     }
 

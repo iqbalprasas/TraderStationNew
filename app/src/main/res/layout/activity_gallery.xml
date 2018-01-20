@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_gallery"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark" >
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <ImageButton
+                android:id="@+id/btn_back_gallery"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:layout_marginRight="16dp"
+                app:srcCompat="@drawable/leftarrow" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gallery"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:id="@+id/toolbar_title_gallery" />
+        </LinearLayout>
+    </android.support.v7.widget.Toolbar>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp">
+            <SearchView
+                android:id="@+id/search_gallery"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:iconifiedByDefault="false"
+                android:imeOptions="actionSearch"
+                android:queryHint="Search Gallery"
+                android:layout_marginBottom="6dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="4dp"
+                android:weightSum="3">
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1.4"
+                    android:text="Latest"
+                    android:layout_gravity="center"
+                    android:paddingTop="8dp"
+                    android:gravity="top|center_horizontal"
+                    android:background="@drawable/click"
+                    android:textColor="#fff"
+                    android:id="@+id/btn_latest_gallery"/>
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.2"/>
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1.4"
+                    android:text="Album"
+                    android:layout_gravity="center"
+                    android:paddingTop="8dp"
+                    android:gravity="top|center_horizontal"
+                    android:background="@drawable/unclick"
+                    android:textColor="@color/colorPrimary"
+                    android:id="@+id/btn_album_gallery"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/fragment_layout"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,250 +1,435 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
+<android.support.percent.PercentRelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center"
+    android:background="#333333">
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/height_button_event"
+        android:layout_height="0dp"
+        android:id="@+id/layout1"
+        app:layout_heightPercent="17%"
+        android:gravity="center"
         android:orientation="horizontal"
-        android:padding="8dp"
-        android:weightSum="13">
-
-        <Button
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="4dp"
+        android:weightSum="12">
+        <ImageButton
             android:id="@+id/btn_more_calendar"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="4"
-            android:paddingTop="8dp"
-            android:textColor="#000000"
-            android:background="@drawable/button_more"
-            android:paddingBottom="8dp"
-            android:textSize="12sp"
-            android:text="@string/economic_calendar"
-            android:gravity="center"
-            android:drawablePadding="@dimen/height_btn_padding_event"
-            android:drawableTop="@drawable/calendar1"/>
+            android:layout_weight="2.5"
+            android:scaleType="fitCenter"
+            android:padding="@dimen/padding_img_more"
+            android:background="@drawable/shape_btn_calendar"
+            android:src="@drawable/icon_tap_e_calendar"
+            android:gravity="center"/>
+
         <View
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_weight="0.5">
+            android:layout_weight="1.4">
 
         </View>
-        <Button
+        <ImageButton
             android:id="@+id/btn_more_event"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="4"
-            android:paddingTop="8dp"
-            android:textColor="#000000"
-            android:background="@drawable/button_more"
-            android:paddingBottom="8dp"
-            android:text="@string/event"
-            android:drawablePadding="@dimen/height_btn_padding_event"
-            android:drawableTop="@drawable/event3"/>
+            android:layout_weight="2.5"
+            android:scaleType="fitCenter"
+            android:padding="@dimen/padding_img_more"
+            android:background="@drawable/shape_btn_event"
+            android:src="@drawable/icon_tap_event"
+            android:gravity="center"/>
         <View
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_weight="0.5">
+            android:layout_weight="1.4">
 
         </View>
-        <Button
+        <ImageButton
             android:id="@+id/btn_more_webinar"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="4"
-            android:paddingTop="8dp"
-            android:textColor="#000000"
-            android:background="@drawable/button_more"
-            android:paddingBottom="8dp"
-            android:text="@string/webinar"
-            android:drawablePadding="@dimen/height_btn_padding_event"
-            android:drawableTop="@drawable/webinar7"/>
+            android:layout_weight="2.5"
+            android:scaleType="fitCenter"
+            android:padding="@dimen/padding_img_more"
+            android:background="@drawable/shape_btn_webinar"
+            android:src="@drawable/icon_webniar"
+            android:gravity="center"/>
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/height_button_event"
+        android:layout_height="0dp"
+        app:layout_heightPercent="8%"
+        android:gravity="center"
+        android:id="@+id/layout2"
+        android:layout_below="@+id/layout1"
         android:orientation="horizontal"
-        android:padding="8dp"
-        android:weightSum="13">
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:weightSum="12">
 
-        <Button
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2.5"
+            android:gravity="center|top"
+            android:textSize="@dimen/font_more_fragment"
+            android:text="Economic Calendar"
+            android:textColor="#fff"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1.4"></View>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2.5"
+            android:gravity="center|top"
+            android:textSize="@dimen/font_more_fragment"
+            android:text="Event"
+            android:textColor="#fff" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1.4"></View>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2.5"
+            android:textSize="@dimen/font_more_fragment"
+            android:gravity="center|top"
+            android:text="Webinar"
+            android:textColor="#fff" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_heightPercent="17%"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="4dp"
+        android:id="@+id/layout3"
+        android:layout_below="@+id/layout2"
+        android:weightSum="12">
+        <ImageButton
             android:id="@+id/btn_more_competition"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="4"
-            android:background="@drawable/button_more"
-            android:drawablePadding="@dimen/height_btn_padding_event"
-            android:drawableTop="@drawable/friends14"
-            android:paddingBottom="8dp"
-            android:paddingTop="8dp"
-            android:text="@string/competition"
-            android:textColor="#000000"
-            android:textSize="12sp" />
+            android:layout_weight="2.5"
+            android:scaleType="fitCenter"
+            android:padding="@dimen/padding_img_more"
+            android:background="@drawable/shape_btn_competition"
+            android:src="@drawable/icon_tap_competition"
+            android:gravity="center"/>
 
         <View
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_weight="0.5">
+            android:layout_weight="1.4">
 
         </View>
 
-        <Button
+        <ImageButton
             android:id="@+id/btn_more_broker"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="4"
-            android:background="@drawable/button_more"
-            android:drawablePadding="@dimen/height_btn_padding_event"
-            android:drawableTop="@drawable/broker6"
-            android:paddingBottom="8dp"
-            android:paddingTop="8dp"
-            android:text="@string/broker"
-            android:textColor="#000000" />
+            android:layout_weight="2.5"
+            android:scaleType="fitCenter"
+            android:padding="@dimen/padding_img_more"
+            android:background="@drawable/shape_btn_broker"
+            android:src="@drawable/icon_tap_broker"
+            android:gravity="center"/>
 
         <View
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_weight="0.5">
+            android:layout_weight="1.4">
 
         </View>
 
-        <Button
+        <ImageButton
             android:id="@+id/btn_more_rebate"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="4"
-            android:background="@drawable/button_more"
-            android:drawablePadding="@dimen/height_btn_padding_event"
-            android:drawableTop="@drawable/rebate_broker5"
-            android:paddingBottom="8dp"
-            android:paddingTop="8dp"
-            android:textSize="12sp"
-            android:text="@string/rebate_broker"
-            android:textColor="#000000" />
+            android:layout_weight="2.5"
+            android:scaleType="fitCenter"
+            android:padding="@dimen/padding_img_more"
+            android:background="@drawable/shape_btn_rebate"
+            android:src="@drawable/icon_tap_rebate_broker"
+            android:gravity="center"/>
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/height_button_event"
+        android:layout_height="0dp"
+        app:layout_heightPercent="8%"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:gravity="center"
         android:orientation="horizontal"
-        android:padding="8dp"
-        android:weightSum="13">
+        android:id="@+id/layout4"
+        android:layout_below="@+id/layout3"
+        android:weightSum="12">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2.5"
+            android:textColor="#fff"
+            android:textSize="@dimen/font_more_fragment"
+            android:gravity="center|top"
+            android:text="Competition" />
 
-        <Button
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1.4">
+        </View>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2.5"
+            android:gravity="center|top"
+            android:textSize="@dimen/font_more_fragment"
+            android:textColor="#fff"
+            android:text="Broker" />
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1.4">
+        </View>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2.5"
+            android:textSize="@dimen/font_more_fragment"
+            android:textColor="#fff"
+            android:gravity="center|top"
+            android:text="Rebate Broker" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_heightPercent="17%"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingTop="8dp"
+        android:id="@+id/layout5"
+        android:layout_below="@+id/layout4"
+        android:paddingBottom="4dp"
+        android:weightSum="12">
+
+        <ImageButton
             android:id="@+id/btn_more_trader_performance"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="4"
-            android:paddingTop="8dp"
-            android:textColor="#000000"
-            android:background="@drawable/button_more"
-            android:paddingBottom="8dp"
-            android:text="@string/trader_performance"
-            android:drawablePadding="@dimen/height_btn_padding_event"
-            android:textSize="12sp"
-            android:drawableTop="@drawable/trader_performance15"/>
+            android:layout_weight="2.5"
+            android:scaleType="fitCenter"
+            android:padding="@dimen/padding_img_more"
+            android:background="@drawable/shape_btn_tp"
+            android:src="@drawable/icon_tap_trader_performance"
+            android:gravity="center"/>
         <View
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_weight="0.5">
+            android:layout_weight="1.4">
 
         </View>
-        <Button
+        <ImageButton
             android:id="@+id/btn_more_ea_performance"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="4"
-            android:paddingTop="8dp"
-            android:textColor="#000000"
-            android:background="@drawable/button_more"
-            android:paddingBottom="8dp"
-            android:textSize="12sp"
-            android:text="@string/ea_performance"
-            android:drawablePadding="@dimen/height_btn_padding_event"
-            android:drawableTop="@drawable/ea_performance19"/>
+            android:layout_weight="2.5"
+            android:scaleType="fitCenter"
+            android:padding="@dimen/padding_img_more"
+            android:background="@drawable/shape_btn_webinar"
+            android:src="@drawable/icon_ea_performance"
+            android:gravity="center"/>
         <View
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_weight="0.5">
+            android:layout_weight="1.4">
 
         </View>
-        <Button
+        <ImageButton
             android:id="@+id/btn_more_pamm"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="4"
-            android:paddingTop="8dp"
-            android:textColor="#000000"
-            android:background="@drawable/button_more"
-            android:paddingBottom="8dp"
-            android:text="@string/pamm"
-            android:drawablePadding="@dimen/height_btn_padding_event"
-            android:drawableTop="@drawable/pamm18"/>
+            android:layout_weight="2.5"
+            android:scaleType="fitCenter"
+            android:padding="@dimen/padding_img_more"
+            android:background="@drawable/shape_btn_pamm"
+            android:src="@drawable/icon_tap_pamm"
+            android:gravity="center"/>
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/height_button_event"
+        android:layout_height="0dp"
+        app:layout_heightPercent="8%"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:gravity="center"
+        android:id="@+id/layout6"
+        android:layout_below="@+id/layout5"
         android:orientation="horizontal"
-        android:padding="8dp"
-        android:weightSum="13">
+        android:weightSum="12">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2.5"
+            android:textSize="@dimen/font_more_fragment"
+            android:textColor="#fff"
+            android:gravity="center|top"
+            android:text="Trader Performance" />
 
-        <Button
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1.4">
+        </View>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2.5"
+            android:textSize="@dimen/font_more_fragment"
+            android:gravity="center|top"
+            android:textColor="#fff"
+            android:text="EA Performance" />
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1.4">
+        </View>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2.5"
+            android:textSize="@dimen/font_more_fragment"
+            android:textColor="#fff"
+            android:gravity="center|top"
+            android:text="PAMM" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_heightPercent="17%"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingTop="8dp"
+        android:id="@+id/layout7"
+        android:layout_below="@+id/layout6"
+        android:paddingBottom="4dp"
+        android:weightSum="12">
+
+        <ImageButton
             android:id="@+id/btn_more_gallery"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="4"
-            android:paddingTop="8dp"
-            android:textColor="#000000"
-            android:background="@drawable/button_more"
-            android:paddingBottom="8dp"
-            android:text="@string/gallery"
-            android:drawablePadding="@dimen/height_btn_padding_event"
-            android:textSize="12sp"
-            android:drawableTop="@drawable/gallery16"/>
+            android:layout_weight="2.5"
+            android:scaleType="fitCenter"
+            android:padding="@dimen/padding_img_more"
+            android:background="@drawable/shape_btn_broker"
+            android:gravity="center"
+            android:src="@drawable/icon_tap_gallery" />
         <View
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_weight="0.5">
+            android:layout_weight="1.4">
 
         </View>
-        <Button
+        <ImageButton
             android:id="@+id/btn_more_promotion"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="4"
-            android:paddingTop="8dp"
-            android:textColor="#000000"
-            android:background="@drawable/button_more"
-            android:paddingBottom="8dp"
-            android:text="@string/promotion"
-            android:drawablePadding="@dimen/height_btn_padding_event"
-            android:textSize="12sp"
-            android:drawableTop="@drawable/promotion8"/>
+            android:layout_weight="2.5"
+            android:scaleType="fitCenter"
+            android:padding="@dimen/padding_img_more"
+            android:background="@drawable/shape_btn_rebate"
+            android:src="@drawable/icon_tap_promotion"
+            android:gravity="center"/>
         <View
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_weight="0.5">
+            android:layout_weight="1.4">
 
         </View>
-        <Button
+        <ImageButton
             android:id="@+id/btn_more_shop"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="4"
-            android:paddingTop="8dp"
-            android:textColor="#000000"
-            android:background="@drawable/button_more"
-            android:paddingBottom="8dp"
-            android:text="@string/shop"
-            android:drawablePadding="@dimen/height_btn_padding_event"
-            android:drawableTop="@drawable/shop17"/>
+            android:layout_weight="2.5"
+            android:scaleType="fitCenter"
+            android:padding="@dimen/padding_img_more"
+            android:background="@drawable/shape_btn_competition"
+            android:src="@drawable/icon_tap_shop"
+            android:gravity="center"/>
     </LinearLayout>
-</LinearLayout>
-</ScrollView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_heightPercent="6%"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:id="@+id/layout8"
+        android:layout_below="@+id/layout7"
+        android:weightSum="12">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2.5"
+            android:textColor="#fff"
+            android:textSize="@dimen/font_more_fragment"
+            android:gravity="center|top"
+            android:text="Gallery" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1.4">
+        </View>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2.5"
+            android:gravity="center|top"
+            android:textSize="@dimen/font_more_fragment"
+            android:textColor="#fff"
+            android:text="Promotion" />
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1.4">
+        </View>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2.5"
+            android:textSize="@dimen/font_more_fragment"
+            android:textColor="#fff"
+            android:gravity="center|top"
+            android:text="Shop" />
+    </LinearLayout>
+</android.support.percent.PercentRelativeLayout>

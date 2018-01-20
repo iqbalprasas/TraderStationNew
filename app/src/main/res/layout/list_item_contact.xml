@@ -11,68 +11,61 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="8dp"
+        android:background="#fff"
         android:orientation="horizontal">
+
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:padding="4dp">
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:id="@+id/id_id_contact"
-                android:textSize="0sp"
-                android:text="" />
-            <ImageView
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:id="@+id/img_profile_contact"
-                app:srcCompat="@mipmap/ic_launcher_round" />
+            <com.github.siyamed.shapeimageview.CircularImageView
+                android:id="@+id/photo_contact"
+                android:layout_width="54dp"
+                android:layout_height="54dp"
+                android:src="@drawable/viewimage"
+                app:siBorderColor="#79C739"
+                app:siBorderWidth="2dp" />
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:paddingLeft="8dp"
+            android:weightSum="10"
             android:orientation="vertical">
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3"
                 android:orientation="horizontal"
-                android:weightSum="13">
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:layout_weight="12">
+                android:weightSum="9">
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/name_profile_contact"
                     android:text="Profile Name"
-                    android:textColor="#000000"
+                    android:textColor="#4c4c4c"
+                    android:layout_gravity="center"
                     android:textStyle="bold"
+                    android:layout_weight="7"
                     android:textSize="16sp"/>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/status_profile_contact"
-                    android:textColor="#000000"
-                    android:text="Lorem ipsum dolor sit amet" />
-            </LinearLayout>
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_gravity="center"
-                    android:layout_weight="1">
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/btn_chat_contact"
-                    android:layout_gravity="center"
-                    android:src="@drawable/chat13"/>
-                </LinearLayout>
-            </LinearLayout>
-        </LinearLayout>
 
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="7"
+                android:orientation="horizontal"
+                android:weightSum="9">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="7"
+                    android:id="@+id/status_profile_contact"
+                    android:text="Lorem ipsum dolor sit amet" />
+
+            </LinearLayout>
+
+        </LinearLayout>
     </LinearLayout>
 </android.support.v7.widget.CardView>

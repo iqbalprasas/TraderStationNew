@@ -1,5 +1,7 @@
 package com.example.telc2.traderstation.adapter;
 
+import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,6 +10,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.telc2.traderstation.R;
+import com.example.telc2.traderstation.activity.TimelineSelectedActivity;
 import com.example.telc2.traderstation.model.Timeline;
 
 import java.util.List;
@@ -34,16 +37,15 @@ public class AdapterTimeline extends RecyclerView.Adapter<AdapterTimeline.Holder
     @Override
     public void onBindViewHolder(HolderData holder, int position) {
         Timeline timeline = timelineList.get(position);
-        holder.txIdTimeline.setText(timeline.getIdTimeline());
         holder.txTime.setText(timeline.getTime());
         //holder.txProfilePhoto
         holder.txProfileName.setText(timeline.getProfileName());
         //holder.txPostPhoto
-        holder.txDesc.setText(timeline.getDesc());
-        holder.txNumLike.setText(timeline.getNumLike());
-        holder.txNumDislike.setText(timeline.getNumDislike());
-        holder.txNumComment.setText(timeline.getNumComment());
-        holder.txNumShare.setText(timeline.getNumShare());
+        holder.txStatus.setText(timeline.getStatus());
+        if(!holder.txStatus.getText().equals("News")){
+            holder.txPostPhoto.setVisibility(View.GONE);
+            holder.txDesc1.setVisibility(View.GONE);
+        }
     }
 
     @Override
@@ -51,7 +53,7 @@ public class AdapterTimeline extends RecyclerView.Adapter<AdapterTimeline.Holder
         return timelineList.size();
     }
 
-    public class HolderData extends RecyclerView.ViewHolder{
+    public class HolderData extends RecyclerView.ViewHolder implements View.OnClickListener{
 
         public TextView txIdTimeline;
         public ImageView txProfilePhoto;
@@ -59,23 +61,27 @@ public class AdapterTimeline extends RecyclerView.Adapter<AdapterTimeline.Holder
         public ImageView txPostPhoto;
         public TextView txTime;
         public TextView txDesc;
-        public TextView txNumLike;
-        public TextView txNumDislike;
-        public TextView txNumComment;
-        public TextView txNumShare;
+        public TextView txDesc1;
+        public TextView txStatus;
 
         public HolderData(View itemView) {
             super(itemView);
+            itemView.setOnClickListener(this);
             txTime = (TextView) itemView.findViewById(R.id.time_profile_timeline);
-            txIdTimeline = (TextView) itemView.findViewById(R.id.id_id_timeline);
             txProfileName = (TextView) itemView.findViewById(R.id.name_profile_timeline);
             txProfilePhoto = (ImageView) itemView.findViewById(R.id.img_profile_timeline);
             txPostPhoto = (ImageView) itemView.findViewById(R.id.img_post_timeline);
             txDesc = (TextView) itemView.findViewById(R.id.desc_profile_timeline);
-            txNumLike = (TextView) itemView.findViewById(R.id.id_like_timeline);
-            txNumDislike = (TextView) itemView.findViewById(R.id.id_dislike_timeline);
-            txNumComment = (TextView) itemView.findViewById(R.id.id_comment_timeline);
-            txNumShare = (TextView) itemView.findViewById(R.id.id_share_timeline);
+            txDesc1 = (TextView) itemView.findViewById(R.id.desc_profile_timeline1);
+            txStatus = (TextView) itemView.findViewById(R.id.tx_status_timeline);
+         }
+
+        @Override
+        public void onClick(View view) {
+            Context context = view.getContext();
+            Intent intent = new Intent(context, TimelineSelectedActivity.class);
+            intent.putExtra("isImgExist",txStatus.getText().toString());
+            context.startActivity(intent);
         }
     }
 

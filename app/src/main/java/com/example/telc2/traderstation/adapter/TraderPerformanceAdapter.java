@@ -8,14 +8,16 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
+import android.widget.Spinner;
 import android.widget.TextView;
 import com.example.telc2.traderstation.R;
 import com.example.telc2.traderstation.model.TraderPerformance;
 import com.jjoe64.graphview.GraphView;
-import com.jjoe64.graphview.GridLabelRenderer;
 import com.jjoe64.graphview.series.DataPoint;
 import com.jjoe64.graphview.series.LineGraphSeries;
 
@@ -39,7 +41,7 @@ public class TraderPerformanceAdapter extends RecyclerView.Adapter<TraderPerform
 
     @Override
     public HeroViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_trader_performance, parent, false);
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_item_tp, parent, false);
         return new HeroViewHolder(v);
     }
 
@@ -84,13 +86,14 @@ public class TraderPerformanceAdapter extends RecyclerView.Adapter<TraderPerform
         return traderPerformanceList.size();
     }
 
-    class HeroViewHolder extends RecyclerView.ViewHolder {
+    class HeroViewHolder extends RecyclerView.ViewHolder implements AdapterView.OnItemSelectedListener {
         TextView txName;
         ImageButton btnExpand;
         LinearLayout expandLayout;
         LineGraphSeries<DataPoint> mSeries2,mSeriesLimit;
         GraphView graph2;
         ProgressBar pgrRate;
+        String [] periods = {"Monthly","Weekly"};
 
         HeroViewHolder(View itemView) {
             super(itemView);
@@ -103,13 +106,24 @@ public class TraderPerformanceAdapter extends RecyclerView.Adapter<TraderPerform
             mSeriesLimit = new LineGraphSeries<>();
             pgrRate = (ProgressBar) itemView.findViewById(R.id.pgr_tp);
 
+            //Getting the instance of Spinner and applying OnItemSelectedListener on it
+            Spinner spin = (Spinner) itemView.findViewById(R.id.spin_tp);
+            spin.setOnItemSelectedListener(this);
+
+            //Creating the ArrayAdapter instance having the bank name list
+            ArrayAdapter aa = new ArrayAdapter(itemView.getContext(),R.layout.white_spinner_item, periods);
+            aa.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+            //Setting the ArrayAdapter data on the Spinner
+            spin.setAdapter(aa);
+
             mSeries2.setColor(Color.parseColor("#4AB240"));
             mSeriesLimit.setColor(Color.RED);
             // styling grid/labels
             //graph2.getGridLabelRenderer().setGridColor(Color.BLACK);
             //graph2.getGridLabelRenderer().setHighlightZeroLines(false);
-            graph2.getGridLabelRenderer().setHorizontalLabelsColor(Color.WHITE);
-            graph2.getGridLabelRenderer().setVerticalLabelsColor(Color.WHITE);
+            graph2.getGridLabelRenderer().setGridColor(Color.WHITE);
+            graph2.getGridLabelRenderer().setHorizontalLabelsVisible(false);
+            graph2.getGridLabelRenderer().setVerticalLabelsVisible(false);
 //            graph2.getGridLabelRenderer().setVerticalLabelsVAlign(GridLabelRenderer.VerticalLabelsVAlign.ABOVE);
 //            graph2.getGridLabelRenderer().setGridStyle(GridLabelRenderer.GridStyle.HORIZONTAL);
             graph2.getGridLabelRenderer().reloadStyles();
@@ -123,11 +137,24 @@ public class TraderPerformanceAdapter extends RecyclerView.Adapter<TraderPerform
             graph2.addSeries(mSeriesLimit);
             mSeriesLimit.appendData(new DataPoint(0, 37), true, 50);
             mSeriesLimit.appendData(new DataPoint(50, 37), true, 50);
+            mSeries2.appendData(new DataPoint(0, 20), true, 50);
             mSeries2.appendData(new DataPoint(10, 25), true, 50);
             mSeries2.appendData(new DataPoint(20, 15), true, 50);
             mSeries2.appendData(new DataPoint(30, 40), true, 50);
             mSeries2.appendData(new DataPoint(40, 35), true, 50);
             mSeries2.appendData(new DataPoint(50, 50), true, 50);
+        }
+
+        //Performing action onItemSelected and onNothing selected
+        @Override
+        public void onItemSelected(AdapterView<?> arg0, View arg1, int position,long id) {
+            //Toast.makeText(getApplicationContext(), country[position], Toast.LENGTH_LONG).show();
+        }
+
+        @Override
+        public void onNothingSelected(AdapterView<?> arg0) {
+            // TODO Auto-generated method stub
+
         }
     }
 }

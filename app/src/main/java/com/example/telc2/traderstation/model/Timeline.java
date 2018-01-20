@@ -5,19 +5,35 @@ package com.example.telc2.traderstation.model;
  */
 
 public class Timeline {
-    private String idTimeline, profilePhoto, profileName, postPhoto, time, desc, numLike, numDislike, numComment, numShare;
+    private String idTimeline, profilePhoto, profileName, postPhoto, time, desc1, desc, status, numLike, numDislike, numComment, numShare;
 
-    public Timeline(String idTimeline, String profilePhoto, String profileName, String postPhoto, String time, String desc, String numLike, String numDislike, String numComment, String numShare) {
+    public Timeline(String idTimeline, String profilePhoto, String profileName, String postPhoto, String time, String desc1, String desc, String status, String numLike, String numDislike, String numComment, String numShare) {
         this.idTimeline = idTimeline;
         this.profilePhoto = profilePhoto;
         this.profileName = profileName;
         this.postPhoto = postPhoto;
         this.time = time;
         this.desc = desc;
+        this.desc1 = desc1;
+        this.status = status;
         this.numLike = numLike;
         this.numDislike = numDislike;
         this.numComment = numComment;
         this.numShare = numShare;
+    }
+
+    public Timeline(String profileName, String status, String time) {
+        this.profileName = profileName;
+        this.status = status;
+        this.time = time;
+    }
+
+    public String getDesc1() {
+        return desc1;
+    }
+
+    public String getStatus() {
+        return status;
     }
 
     public String getIdTimeline() {

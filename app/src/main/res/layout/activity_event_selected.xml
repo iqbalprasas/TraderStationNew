@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_event_selected"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark" >
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <ImageButton
+                android:id="@+id/btn_back_event_selected"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:layout_marginRight="16dp"
+                app:srcCompat="@drawable/leftarrow" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:id="@+id/toolbar_title_event_selected" />
+        </LinearLayout>
+    </android.support.v7.widget.Toolbar>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="8dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp">
+
+                <TextView
+                    android:id="@+id/text_event_title_selected"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Lorem ipsum"
+                    android:textColor="#4c4c4c"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="right">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/time_event"/>
+                    <TextView
+                        android:id="@+id/text_event_date2_selected"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="12 December 2017" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="240dp"
+                    android:src="@drawable/seminar_web"
+                    android:id="@+id/img_event_selected"/>
+
+                <TextView
+                    android:id="@+id/text_event_desc_selected"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="..." />
+
+                <TextView
+                    android:id="@+id/text_event_date_selected"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center"
+                    android:textColor="@color/colorPrimary"
+                    android:paddingBottom="8dp"
+                    android:background="@drawable/tittle_event1"
+                    android:text="Friday 29th December 2017 14:40"
+                    android:textSize="16sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:background="#CC000000"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2.5">
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.2"
+                            android:layout_gravity="center"
+                            android:src="@drawable/form_name"
+                            />
+                        <android.support.design.widget.TextInputLayout
+                            android:id="@+id/input_webinar_name"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textColorHint="@color/colorPrimary">
+                            <EditText
+                                android:id="@+id/edt_event_name"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif"
+                                android:hint="Name"
+                                android:padding="8dp"
+                                android:inputType="textPersonName"
+                                android:textColor="#fff" />
+                        </android.support.design.widget.TextInputLayout>
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_weight="0.1"/>
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.2"
+                            android:layout_gravity="center"
+                            android:src="@drawable/form_phone"
+                            />
+                        <android.support.design.widget.TextInputLayout
+                            android:id="@+id/input_webinar_phone"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textColorHint="@color/colorPrimary">
+                            <EditText
+                                android:id="@+id/edt_event_phone"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif"
+                                android:hint="Phone Number"
+                                android:padding="8dp"
+                                android:inputType="textPersonName"
+                                android:textColor="#fff" />
+                        </android.support.design.widget.TextInputLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="8dp"
+                        android:weightSum="2.5">
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.2"
+                            android:layout_gravity="center"
+                            android:src="@drawable/form_email"
+                            />
+                        <android.support.design.widget.TextInputLayout
+                            android:id="@+id/input_webinar_email"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textColorHint="@color/colorPrimary">
+                            <EditText
+                                android:id="@+id/edt_event_email"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif"
+                                android:hint="Email"
+                                android:padding="8dp"
+                                android:inputType="textEmailAddress"
+                                android:textColor="#fff" />
+                        </android.support.design.widget.TextInputLayout>
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_weight="0.1"/>
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.2"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="4dp"
+                            android:src="@drawable/form_country"
+                            />
+                        <Spinner
+                            android:id="@+id/spin_country_event"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1" />
+                    </LinearLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Join Event"
+                        android:background="@drawable/shape_chat_tt"
+                        android:paddingRight="24dp"
+                        android:paddingLeft="24dp"
+                        android:paddingTop="4dp"
+                        android:paddingBottom="4dp"
+                        android:textColor="#fff"
+                        android:id="@+id/btn_regis_event"/>
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+</LinearLayout>

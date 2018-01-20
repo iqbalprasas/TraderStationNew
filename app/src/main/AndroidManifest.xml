@@ -48,6 +48,13 @@
         <activity android:name=".activity.RebateBrokerActivity"/>
         <activity android:name=".activity.BrokerActivity"/>
         <activity android:name=".activity.ReviewBrokerActivity"/>
+        <activity android:name=".activity.EAPerformanceActivity"/>
+        <activity android:name=".activity.PammActivity"/>
+        <activity android:name=".activity.PammSelectedActivity"/>
+        <activity android:name=".activity.GalleryActivity"/>
+        <activity android:name=".activity.AlbumSelectedActivity"/>
+        <activity android:name=".activity.EventSelectedActivity"/>
+        <activity android:name=".activity.TimelineSelectedActivity"/>
     </application>
 
 </manifest>

@@ -82,18 +82,18 @@ public class MenuActivity extends AppCompatActivity implements NavigationView.On
         tabLayout.addTab(tabLayout.newTab());
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
         //tabLayout.setupWithViewPager(viewPager);
-        tabLayout.getTabAt(0).setIcon(R.drawable.friends14);
-        tabLayout.getTabAt(1).setIcon(R.drawable.chat13);
-        tabLayout.getTabAt(2).setIcon(R.drawable.timeline4);
-        tabLayout.getTabAt(3).setIcon(R.drawable.more2);
+        tabLayout.getTabAt(0).setIcon(R.drawable.kontak);
+        tabLayout.getTabAt(1).setIcon(R.drawable.chat);
+        tabLayout.getTabAt(2).setIcon(R.drawable.timeline);
+        tabLayout.getTabAt(3).setIcon(R.drawable.more);
 
-        LinearLayout linearLayout = (LinearLayout)tabLayout.getChildAt(0);
-        linearLayout.setShowDividers(LinearLayout.SHOW_DIVIDER_MIDDLE);
-        GradientDrawable drawable = new GradientDrawable();
-        drawable.setColor(Color.LTGRAY);
-        drawable.setSize(1, 1);
-        linearLayout.setDividerPadding(10);
-        linearLayout.setDividerDrawable(drawable);
+//        LinearLayout linearLayout = (LinearLayout)tabLayout.getChildAt(0);
+//        linearLayout.setShowDividers(LinearLayout.SHOW_DIVIDER_MIDDLE);
+//        GradientDrawable drawable = new GradientDrawable();
+//        drawable.setColor(Color.LTGRAY);
+//        drawable.setSize(1, 1);
+//        linearLayout.setDividerPadding(10);
+//        linearLayout.setDividerDrawable(drawable);
 
         //handling navigation view item event
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);

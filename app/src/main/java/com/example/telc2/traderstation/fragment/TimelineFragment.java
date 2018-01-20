@@ -184,8 +184,13 @@ public class TimelineFragment extends Fragment implements SearchView.OnQueryText
     }
 
     public void loadDataDummy(){
+        Timeline timeline;
         for (int i = 0;i<10;i++){
-            Timeline timeline = new Timeline("calendar1","","Profile Name","","calendar1 minute ago","lorem ipsum","","","","");
+            if((i % 2) == 0){
+                timeline = new Timeline("Profile Name "+String.valueOf(i),"News",String.valueOf(i*2)+" minutes ago");
+            }else{
+                timeline = new Timeline("Profile Name "+String.valueOf(i),"Personal Status",String.valueOf(i*2)+" minutes ago");
+            }
             timelineList.add(timeline);
             adapterTimeline.notifyDataSetChanged();
         }

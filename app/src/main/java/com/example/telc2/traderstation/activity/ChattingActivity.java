@@ -72,21 +72,21 @@ public class ChattingActivity extends AppCompatActivity {
         mChatView = (ChatView)findViewById(R.id.chat_view);
 
         //Set UI parameters if you need
-        mChatView.setRightBubbleColor(ContextCompat.getColor(this, R.color.green500));
-        mChatView.setLeftBubbleColor(ContextCompat.getColor(this, R.color.green500));
-        mChatView.setBackgroundColor(ContextCompat.getColor(this, R.color.blueGray50));
-        mChatView.setSendButtonColor(ContextCompat.getColor(this, R.color.green500));
+        mChatView.setRightBubbleColor(Color.parseColor("#A2DA33"));
+        mChatView.setLeftBubbleColor(Color.WHITE);
         mChatView.setSendIcon(R.drawable.ic_action_send);
-        mChatView.setRightMessageTextColor(Color.BLACK);
+        //mChatView.setSendButtonColor(Color.parseColor("#999999"));
+        mChatView.setSendButtonColor(Color.GRAY);
+        mChatView.setRightMessageTextColor(Color.WHITE);
         mChatView.setLeftMessageTextColor(Color.BLACK);
-        mChatView.setUsernameTextColor(Color.BLACK);
+        mChatView.setUsernameTextColor(Color.WHITE);
         mChatView.setSendTimeTextColor(Color.BLACK);
-        mChatView.setDateSeparatorColor(Color.BLACK);
-        mChatView.setInputTextHint("chat");
+        mChatView.setOptionButtonColor(Color.GRAY);
+        mChatView.setDateSeparatorColor(Color.WHITE);
+        mChatView.setInputTextHint("Message..");
         mChatView.setMessageMarginTop(0);
         mChatView.setMessageMarginBottom(0);
         mChatView.setDividerPadding(0);
-
         //Click Send Button
         mChatView.setOnClickSendButtonListener(new View.OnClickListener() {
             @Override

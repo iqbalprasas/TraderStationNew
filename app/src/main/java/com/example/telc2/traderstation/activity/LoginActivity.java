@@ -122,6 +122,9 @@ public class LoginActivity extends AppCompatActivity {
                 dialog.dismiss();
                 Toast.makeText(LoginActivity.this, "Login gagal",
                         Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(LoginActivity.this, MenuActivity.class);
+                startActivity(intent);
+                finish();
             }
         }
     }

@@ -45,8 +45,9 @@ dependencies {
     compile 'com.github.lawloretienne:quickreturn:0.0.3'
     compile 'com.squareup.picasso:picasso:2.3.2'
     compile 'com.nineoldandroids:library:2.4.0'
+    compile 'com.android.support:percent:25.3.1'
     compile 'com.daimajia.slider:library:1.1.5@aar'
-    compile files('libs/YouTubeAndroidPlayerApi.jar')
+    compile 'com.github.siyamed:android-shape-imageview:0.9.+@aar'
 
     testCompile 'junit:junit:4.12'
     compile project(path: ':aFileChooser')

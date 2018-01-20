@@ -47,7 +47,7 @@ public class WebinarSelectedActivity extends AppCompatActivity implements Adapte
         descWebinar.setText(s);
 
         //Getting the instance of Spinner and applying OnItemSelectedListener on it
-        Spinner spin = (Spinner) findViewById(R.id.spin_country);
+        Spinner spin = (Spinner) findViewById(R.id.spin_webinar);
         spin.setOnItemSelectedListener(this);
 
         //Creating the ArrayAdapter instance having the bank name list

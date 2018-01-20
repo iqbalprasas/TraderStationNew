@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="8dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="2"
+            android:orientation="horizontal">
+            <com.example.telc2.traderstation.helper.ExpandableHeightGridView
+                android:id="@+id/gridview_gallery"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:numColumns="2"
+                android:stretchMode="columnWidth"
+                android:verticalSpacing="8dp"
+                android:horizontalSpacing="8dp"
+                />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

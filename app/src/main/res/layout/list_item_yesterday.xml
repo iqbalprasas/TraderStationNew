@@ -11,98 +11,129 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="8dp"
-            android:orientation="vertical">
+            android:orientation="horizontal">
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:weightSum="5">
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:gravity="center">
+                    <me.zhanghai.android.materialprogressbar.MaterialProgressBar
+                        android:id="@+id/pgr_rate"
+                        android:layout_width="54dp"
+                        android:layout_height="54dp"
+                        android:layout_centerInParent="true"
+                        android:indeterminate="false"
+                        android:secondaryProgress="100"
+                        style="@style/Widget.MaterialProgressBar.ProgressBar"/>
+                    <ImageView
+                        android:layout_width="54dp"
+                        android:layout_height="54dp"
+                        android:padding="12dp"
+                        android:id="@+id/image_flag"
+                        android:src="@drawable/united_kingdom"/>
+                </RelativeLayout>
                 <TextView
-                    android:layout_width="0dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="08:00 AM"
                     android:gravity="center"
                     android:id="@+id/tx_time"/>
-                <View
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
-                    android:layout_weight="0.2"/>
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="3.3"
-                    android:id="@+id/tx_name"
-                    android:text="Name"/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:weightSum="5">
-                <ImageView
-                    android:id="@+id/image_flag"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:src="@drawable/united_kingdom"
-                    android:layout_weight="1"
-                    android:layout_gravity="left"/>
-                <View
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
-                    android:layout_weight="0.2"/>
-                <TextView
-                    android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1.2"
-                    android:id="@+id/tx_act"
-                    android:text=""/>
-                <TextView
-                    android:layout_width="0dp"
+                    android:orientation="horizontal"
+                    android:weightSum="4">
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.2"/>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3.3"
+                        android:gravity="center"
+                        android:id="@+id/tx_name"
+                        android:text="Name"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1.2"
-                    android:id="@+id/tx_cons"
-                    android:text=""/>
+                    android:weightSum="4">
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.2"/>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.2"
+                        android:gravity="center"
+                        android:textSize="16sp"
+                        android:textColor="@color/colorPrimary"
+                        android:id="@+id/tx_act"
+                        android:text=""/>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.2"
+                        android:gravity="center"
+                        android:textSize="16sp"
+                        android:textColor="@color/colorPrimary"
+                        android:id="@+id/tx_cons"
+                        android:text=""/>
 
-                <TextView
-                    android:layout_width="0dp"
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.2"
+                        android:gravity="center"
+                        android:textSize="16sp"
+                        android:textColor="@color/colorPrimary"
+                        android:id="@+id/tx_prev"
+                        android:text=""/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1.2"
-                    android:id="@+id/tx_prev"
-                    android:text=""/>
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:weightSum="5">
+                    android:orientation="horizontal"
+                    android:weightSum="4">
 
-                <ProgressBar
-                    style="?android:attr/progressBarStyleHorizontal"
-                    android:id="@+id/pgr_rate"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1" />
-                <View
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
-                    android:layout_weight="0.2"/>
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1.2"
-                    android:text="Actual"/>
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.2"/>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.2"
+                        android:gravity="center"
+                        android:text="Actual"/>
 
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1.2"
-                    android:text="Previous"/>
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1.2"
-                    android:text="Consensus"/>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.2"
+                        android:gravity="center"
+                        android:text="Previous"/>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.2"
+                        android:gravity="center"
+                        android:text="Consensus"/>
 
+                </LinearLayout>
             </LinearLayout>
         </LinearLayout>
     </android.support.v7.widget.CardView>

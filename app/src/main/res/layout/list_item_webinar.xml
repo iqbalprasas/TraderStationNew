@@ -12,6 +12,30 @@
         android:layout_height="wrap_content"
         android:padding="8dp"
         android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Lorem ipsum"
+            android:textColor="#4c4c4c"
+            android:textStyle="bold"
+            android:id="@+id/text_webinar_title"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="right">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/time_event"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="12 Desember 2017"
+            android:textSize="12sp"
+            android:id="@+id/text_webinar_date"/>
+    </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -26,19 +50,6 @@
                 android:layout_height="match_parent"
                 android:orientation="vertical"
                 android:padding="8dp">
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Lorem ipsum"
-                    android:textColor="#000"
-                    android:textStyle="bold"
-                    android:id="@+id/text_webinar_title"/>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="12 Desember 2017"
-                    android:textSize="12sp"
-                    android:id="@+id/text_webinar_date"/>
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
