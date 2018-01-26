@@ -46,7 +46,6 @@ public class TopTraderAdapter extends RecyclerView.Adapter<TopTraderAdapter.Hold
 //        holder.txEquity.setText(topTrader.getEquity());
 //        holder.txOpen.setText(topTrader.getOpen());
 //        holder.txClose.setText(topTrader.getClose());
-        holder.pgrRate.setProgress(topTrader.getRate());
     }
 
     @Override
@@ -66,7 +65,7 @@ public class TopTraderAdapter extends RecyclerView.Adapter<TopTraderAdapter.Hold
         public TextView txClose;
         public ImageView imgFlag;
         public ImageView imgProfile;
-        public ProgressBar pgrRate;
+        //public ProgressBar pgrRate;
 
         public HolderData(View itemView) {
             super(itemView);
@@ -80,7 +79,6 @@ public class TopTraderAdapter extends RecyclerView.Adapter<TopTraderAdapter.Hold
             txClose = (TextView) itemView.findViewById(R.id.tx_ct_comp);
             imgFlag = (ImageView) itemView.findViewById(R.id.img_flag_comp);
             imgProfile = (ImageView) itemView.findViewById(R.id.img_profile_comp);
-            pgrRate = (ProgressBar) itemView.findViewById(R.id.pgr_comp);
         }
         @Override
         public void onClick(View view) {

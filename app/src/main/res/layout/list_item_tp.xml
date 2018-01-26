@@ -13,11 +13,8 @@
         android:orientation="vertical">
         <LinearLayout
             android:layout_width="match_parent"
-            android:background="#303030"
             android:layout_height="wrap_content"
-            android:paddingLeft="8dp"
-            android:paddingTop="8dp"
-            android:paddingRight="8dp"
+            android:padding="8dp"
             android:orientation="horizontal">
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -25,407 +22,393 @@
                 android:orientation="vertical"
                 android:layout_marginRight="2dp"
                 android:padding="1dp">
-                <ImageView
-                    android:layout_width="@dimen/img_pp_comp"
-                    android:layout_height="@dimen/img_pp_comp"
+                <com.github.siyamed.shapeimageview.CircularImageView
+                    android:layout_width="@dimen/img_pp_ea"
+                    android:layout_height="@dimen/img_pp_ea"
                     android:id="@+id/img_profile_tp"
                     android:layout_gravity="center"
-                    app:srcCompat="@mipmap/ic_launcher_round" />
-                <ImageView
-                    android:id="@+id/img_flag_tp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="18dp"
-                    android:src="@drawable/united_kingdom"
-                    android:layout_margin="4dp"
-                    android:layout_gravity="center"/>
-
-
+                    android:src="@drawable/seminar_web"
+                    app:siBorderColor="#79C739"
+                    app:siBorderWidth="0dp"/>
             </LinearLayout>
-
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
+                android:gravity="center|left"
                 android:layout_marginLeft="4dp"
                 android:padding="1dp">
-                <LinearLayout
-                    android:layout_width="match_parent"
+                <TextView
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:weightSum="8">
-                    <TextView
-                        android:layout_width="0dp"
+                    android:text="Username"
+                    android:textSize="@dimen/heighy_text_bold_tp"
+                    android:textColor="#000"
+                    android:id="@+id/tx_username_tp"
+                    android:textStyle="bold"/>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/img_star_tp"
+                    android:src="@drawable/starbar_3"/>
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="2dp">
+                    <com.github.siyamed.shapeimageview.RoundedImageView
+                        android:id="@+id/img_flag_tp"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Username"
-                        android:textSize="@dimen/heighy_text_bold_tp"
-                        android:textColor="#fff"
-                        android:layout_weight="7"
-                        android:id="@+id/tx_username_tp"
-                        android:textStyle="bold"/>
-                    <ImageButton
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:background="#303030"
-                        android:layout_weight="1"
-                        android:id="@+id/btn_expand"
-                        android:src="@drawable/ic_down"/>
-                </LinearLayout>
+                        android:src="@drawable/united_kingdom"
+                        app:siBorderColor="#000"
+                        app:siBorderWidth="1dp"
+                        app:siRadius="0dp" />
+                </FrameLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:weightSum="2">
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-                    <ProgressBar
-                        android:layout_width="match_parent"
-                        android:layout_height="10dp"
-                        android:layout_marginTop="3dp"
-                        android:layout_marginBottom="3dp"
-                        style="?android:attr/progressBarStyleHorizontal"
-                        android:progress="50"
-                        android:indeterminate="false"
-                        android:progressDrawable="@drawable/color_progress"
-                        android:id="@+id/pgr_tp"/>
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="2dp">
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="1dp"
-                        android:background="@color/colorPrimary"/>
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:weightSum="6">
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
                     <TextView
-                        android:layout_width="0dp"
+                        android:id="@+id/tx_return_tp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="10%"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/heighy_text_bold_tp" />
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/return_back"/>
+                    <TextView
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Return"
-                        android:textSize="@dimen/heighy_text_bold_tp"                        android:gravity="center"
-                        android:layout_weight="3"
-                        android:textStyle="bold"
-                        android:textColor="#fff" />
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:text="Drawdown"
-                        android:textSize="@dimen/heighy_text_bold_tp"                        android:gravity="center"
-                        android:layout_weight="3"
-                        android:textStyle="bold"
-                        android:textColor="#fff" />
+                        android:textSize="12sp"
+                        android:gravity="center"/>
                 </LinearLayout>
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:weightSum="6">
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/tx_drawdown_tp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="4.49%"
+                        android:textColor="@android:color/holo_red_light"
+                        android:textSize="@dimen/heighy_text_bold_tp" />
 
-                    <TextView
-                        android:layout_width="0dp"
+                    <ImageView
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="10%"
-                        android:textSize="@dimen/heighy_text_bold_tp"
-                        android:background="@drawable/shape_chat_tt"
-                        android:gravity="center"
-                        android:layout_weight="3"
-                        android:textStyle="bold"
-                        android:layout_marginRight="4dp"
-                        android:textColor="#fff"
-                        android:id="@+id/tx_return_tp"/>
+                        android:layout_gravity="center"
+                        android:src="@drawable/drawdown" />
                     <TextView
-                        android:layout_width="0dp"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="10%"
-                        android:textSize="@dimen/heighy_text_bold_tp"                        android:background="@drawable/shape_red"
-                        android:gravity="center"
-                        android:layout_weight="3"
-                        android:textStyle="bold"
-                        android:textColor="#fff"
-                        android:id="@+id/tx_drawdown_tp"/>
+                        android:text="Drawdown"
+                        android:textSize="12sp"
+                        android:gravity="center"/>
                 </LinearLayout>
-
             </LinearLayout>
         </LinearLayout>
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@android:color/transparent"
+            android:id="@+id/btn_expand_tp"
+            android:src="@drawable/ic_down_black"/>
         <LinearLayout
             android:layout_width="match_parent"
-            android:background="#303030"
             android:layout_height="wrap_content"
             android:paddingLeft="8dp"
             android:paddingRight="8dp"
             android:orientation="vertical"
-            android:id="@+id/expand_layout">
+            android:id="@+id/expand_layout_tp">
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="@dimen/height_circle_tp"
+                android:padding="6dp"
+                android:weightSum="4.2"
+                android:gravity="center"
                 android:orientation="horizontal">
                 <LinearLayout
-                    android:layout_width="@dimen/widht_side_button_tp"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_marginRight="2dp"
-                    android:layout_marginTop="1dp"
-                    android:padding="1dp">
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="123 Follower"
-                        android:textColor="#fff"
-                        android:padding="4dp"
-                        android:gravity="center"
-                        android:textSize="@dimen/font_reverse_tp"
-                        android:background="@drawable/shape_biru"
-                        android:layout_marginBottom="4dp"
-                        android:id="@+id/tx_follwer_tp"/>
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="123 Copier"
-                        android:textColor="#fff"
-                        android:gravity="center"
-                        android:padding="4dp"
-                        android:textSize="@dimen/font_reverse_tp"
-                        android:background="@drawable/shape_chat_tt"
-                        android:layout_marginBottom="4dp"
-                        android:id="@+id/tx_copier_tp"/>
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="123 Reverser"
-                        android:textColor="#fff"
-                        android:padding="4dp"
-                        android:gravity="center"
-                        android:textSize="@dimen/font_reverse_tp"
-                        android:background="@drawable/shape_yellow"
-                        android:layout_marginBottom="2dp"
-                        android:id="@+id/tx_reverser_tp"/>
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/margin_top_line_tp"
-                        android:layout_marginBottom="4dp">
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="1dp"
-                            android:background="@color/colorPrimary"/>
-                    </LinearLayout>
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="Follow"
-                        android:gravity="center"
-                        android:textColor="#fff"
-                        android:padding="4dp"
-                        android:textStyle="bold"
-                        android:textSize="@dimen/font_reverse_tp"
-                        android:background="@drawable/shape_biru"
-                        android:layout_marginBottom="4dp"
-                        android:id="@+id/tx_follow_tp"/>
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Copy"
-                        android:textStyle="bold"
-                        android:textColor="#fff"
-                        android:gravity="center"
-                        android:padding="4dp"
-                        android:textSize="@dimen/font_reverse_tp"
-                        android:background="@drawable/shape_chat_tt"
-                        android:layout_marginBottom="4dp"
-                        android:id="@+id/tx_copy_tp"/>
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Reverse"
-                        android:textStyle="bold"
-                        android:textColor="#fff"
-                        android:padding="4dp"
-                        android:gravity="center"
-                        android:textSize="@dimen/font_reverse_tp"
-                        android:background="@drawable/shape_yellow"
-                        android:layout_marginBottom="2dp"
-                        android:id="@+id/tx_reverse_tp"/>
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="match_parent"
+                    android:layout_width="0dp"
                     android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
                     android:orientation="vertical"
-                    android:layout_marginLeft="4dp"
-                    android:padding="1dp">
-                    <LinearLayout
-                        android:layout_width="match_parent"
+                    android:background="@drawable/shape_btn_rebate">
+                    <TextView
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:weightSum="6">
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:text="Balance"
-                            android:textSize="@dimen/heighy_text_bold_tp"                        android:layout_weight="3"
-                            android:gravity="center"
-                            android:textStyle="bold"
-                            android:textColor="#fff" />
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:text="50.000.00"
-                            android:layout_weight="3"
-                            android:textStyle="bold"
-                            android:gravity="center"
-                            android:textSize="@dimen/heighy_text_bold_tp"                        android:textColor="#fff"
-                            android:id="@+id/tx_balance_tp"/>
-                    </LinearLayout>
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="2dp">
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="1dp"
-                            android:background="@color/colorPrimary"/>
-                    </LinearLayout>
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:weightSum="6">
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="4"
-                            android:orientation="vertical">
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Broker Information:"
-                                android:textColor="#fff"
-                                android:textSize="@dimen/font_desc_tp"/>
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="FXDDMalta-LiveServer4"
-                                android:textColor="#fff"
-                                android:textSize="@dimen/font_desc_tp"
-                                android:id="@+id/tx_broker_info_tp"/>
-                        </LinearLayout>
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="2"
-                            android:orientation="vertical">
+                        android:text="Followers"
+                        android:textSize="@dimen/font_profit_pamm2" />
 
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:text="Period"
-                                android:textColor="#fff"
-                                android:textSize="@dimen/font_desc_tp" />
-                            <Spinner
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:id="@+id/spin_tp"/>
-                        </LinearLayout>
-                    </LinearLayout>
-                    <LinearLayout
-                        android:layout_width="match_parent"
+                    <TextView
+                        android:id="@+id/tx_follower_tp"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="2dp"
-                        android:layout_marginBottom="4dp">
-                    </LinearLayout>
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="horizontal">
-                        <com.jjoe64.graphview.GraphView
-                            android:id="@+id/graph_tp"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent" />
-                    </LinearLayout>
+                        android:text="123"
+                        android:textColor="#99DBDE"
+                        android:textSize="@dimen/font_circle_tp" />
+                </LinearLayout>
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.05"/>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:background="@drawable/shape_btn_calendar">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Balance"
+                        android:textSize="@dimen/font_profit_pamm2" />
+
+                    <TextView
+                        android:id="@+id/tx_balance_tp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="$50123"
+                        android:textColor="#388875"
+                        android:textSize="@dimen/font_circle_tp" />
+                </LinearLayout>
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.05"/>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:background="@drawable/shape_btn_webinar">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Copiers"
+                        android:textSize="@dimen/font_profit_pamm2" />
+
+                    <TextView
+                        android:id="@+id/tx_copiers_tp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="123"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/font_circle_tp" />
+                </LinearLayout>
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.05"/>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:background="@drawable/shape_btn_competition">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Reverser"
+                        android:textSize="@dimen/font_profit_pamm2" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/font_circle_tp"
+                        android:text="123"
+                        android:id="@+id/tx_reverser_tp"
+                        android:textColor="#E2BF23"/>
                 </LinearLayout>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
-                <View
+                android:padding="2dp"
+                android:orientation="horizontal">
+                <com.jjoe64.graphview.GraphView
+                    android:id="@+id/graph_tp"
                     android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="@color/colorPrimary"
-                    android:layout_marginTop="2dp"/>
+                    android:layout_height="100dp" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3">
                 <LinearLayout
-                    android:layout_width="match_parent"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:layout_weight="1"
-                    android:layout_marginRight="2dp"
+                    android:layout_weight="2"
                     android:layout_marginTop="1dp"
-                    android:padding="1dp">
+                    android:padding="4dp">
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:weightSum="4">
+                        android:weightSum="2">
                         <TextView
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="0.9"
                             android:text="Gain"
-                            android:textColor="#fff"/>
+                            android:textColor="#4c4c4c" />
                         <TextView
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1.1"
-                            android:text=": 89.2 %"
-                            android:id="@+id/tx_gain_album_selected"
-                            android:textColor="#fff"/>
+                            android:text="89.2 %"
+                            android:id="@+id/tx_gain_tp"
+                            android:textColor="@color/colorPrimary"
+                            android:gravity="right"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:weightSum="2">
                         <TextView
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="0.9"
                             android:text="Balance"
-                            android:textColor="#fff"/>
+                            android:textColor="#4c4c4c"/>
                         <TextView
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1.1"
-                            android:text=": $1234567"
-                            android:id="@+id/tx_balance_album_selected"
-                            android:textColor="#fff"/>
+                            android:text="$1234567"
+                            android:id="@+id/tx_balance_desc_tp"
+                            android:textColor="@color/colorPrimary"
+                            android:gravity="right"/>
                     </LinearLayout>
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:weightSum="4">
+                        android:weightSum="2">
                         <TextView
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="0.9"
                             android:text="Profit"
-                            android:textColor="#fff"/>
+                            android:textColor="#4c4c4c"/>
                         <TextView
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1.1"
-                            android:text=": $1234567"
-                            android:id="@+id/tx_profit_album_selected"
-                            android:textColor="#fff"/>
+                            android:text="$1234567"
+                            android:id="@+id/tx_profit_tp"
+                            android:textColor="@color/colorPrimary"
+                            android:gravity="right"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:weightSum="2">
                         <TextView
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="0.9"
                             android:text="Equity"
-                            android:textColor="#fff"/>
+                            android:textColor="#4c4c4c"/>
                         <TextView
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1.1"
-                            android:text=": $1234567"
-                            android:id="@+id/tx_equity_album_selected"
-                            android:textColor="#fff"/>
+                            android:text="$1234567"
+                            android:id="@+id/tx_equity_tp"
+                            android:textColor="@color/colorPrimary"
+                            android:gravity="right"/>
                     </LinearLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Broker Information"
+                        android:textColor="#4c4c4c"
+                        android:textSize="@dimen/font_desc_tp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="lorem ipsum"
+                        android:textSize="@dimen/font_desc_tp"
+                        android:textColor="@color/colorPrimary"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="8dp">
+                    <Spinner
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="6dp"
+                        android:id="@+id/spin_tp"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Copy"
+                        android:textColor="#fff"
+                        android:padding="4dp"
+                        android:gravity="center|bottom"
+                        android:textSize="@dimen/font_reverse_tp"
+                        android:background="@drawable/shape_chat_tt"
+                        android:layout_marginBottom="6dp"
+                        android:id="@+id/btn_copy_tp"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Reverse"
+                        android:gravity="center|bottom"
+                        android:textColor="#fff"
+                        android:padding="4dp"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="6dp"
+                        android:textSize="@dimen/font_reverse_tp"
+                        android:background="@drawable/shape_view_detail"
+                        android:id="@+id/btn_reverse_tp"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Follow"
+                        android:textColor="#fff"
+                        android:padding="4dp"
+                        android:gravity="center|bottom"
+                        android:textSize="@dimen/font_reverse_tp"
+                        android:background="@drawable/shape_btn_gdark"
+                        android:id="@+id/btn_follow_tp"/>
                 </LinearLayout>
             </LinearLayout>
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@android:color/transparent"
+                android:id="@+id/btn_expand_tp_up"
+                android:src="@drawable/ic_up_black"/>
         </LinearLayout>
     </LinearLayout>
 

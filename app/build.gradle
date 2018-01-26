@@ -48,6 +48,7 @@ dependencies {
     compile 'com.android.support:percent:25.3.1'
     compile 'com.daimajia.slider:library:1.1.5@aar'
     compile 'com.github.siyamed:android-shape-imageview:0.9.+@aar'
+    compile 'com.jackandphantom.android:circularprogressbar:1.2.0'
 
     testCompile 'junit:junit:4.12'
     compile project(path: ':aFileChooser')

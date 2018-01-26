@@ -49,7 +49,6 @@ public class TraderPerformanceAdapter extends RecyclerView.Adapter<TraderPerform
     public void onBindViewHolder(final HeroViewHolder holder, final int position) {
         TraderPerformance traderPerformance = traderPerformanceList.get(position);
         holder.txName.setText(traderPerformance.getUsername());
-        holder.pgrRate.setProgress(traderPerformance.getRate());
         holder.expandLayout.setVisibility(View.GONE);
 
         //if the position is equals to the item position which is to be expanded
@@ -62,21 +61,27 @@ public class TraderPerformanceAdapter extends RecyclerView.Adapter<TraderPerform
 
             //adding sliding effect
             holder.expandLayout.startAnimation(slideDown);
+
+            holder.btnExpand.setVisibility(View.GONE);
         }
 
         holder.btnExpand.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-                if(currentPosition == position){
-                    //holder.expandLayout.setVisibility(View.GONE);
-                    currentPosition = -1;
-                }else{
-                    //getting the position of the item to expand it
-                    currentPosition = position;
-                }
+                //getting the position of the item to expand it
+                currentPosition = position;
                 //reloding the list
                 notifyDataSetChanged();
+            }
+        });
+
+        holder.btnExpandUp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                currentPosition = -1;
+                //reloding the list
+                notifyDataSetChanged();
+                holder.btnExpand.setVisibility(View.VISIBLE);
             }
         });
     }
@@ -89,29 +94,29 @@ public class TraderPerformanceAdapter extends RecyclerView.Adapter<TraderPerform
     class HeroViewHolder extends RecyclerView.ViewHolder implements AdapterView.OnItemSelectedListener {
         TextView txName;
         ImageButton btnExpand;
+        ImageButton btnExpandUp;
         LinearLayout expandLayout;
         LineGraphSeries<DataPoint> mSeries2,mSeriesLimit;
         GraphView graph2;
-        ProgressBar pgrRate;
         String [] periods = {"Monthly","Weekly"};
 
         HeroViewHolder(View itemView) {
             super(itemView);
 
             txName = (TextView) itemView.findViewById(R.id.tx_username_tp);
-            btnExpand = (ImageButton) itemView.findViewById(R.id.btn_expand);
-            expandLayout = (LinearLayout) itemView.findViewById(R.id.expand_layout);
+            btnExpand = (ImageButton) itemView.findViewById(R.id.btn_expand_tp);
+            btnExpandUp = (ImageButton) itemView.findViewById(R.id.btn_expand_tp_up);
+            expandLayout = (LinearLayout) itemView.findViewById(R.id.expand_layout_tp);
             graph2 = (GraphView) itemView.findViewById(R.id.graph_tp);
             mSeries2 = new LineGraphSeries<>();
             mSeriesLimit = new LineGraphSeries<>();
-            pgrRate = (ProgressBar) itemView.findViewById(R.id.pgr_tp);
 
             //Getting the instance of Spinner and applying OnItemSelectedListener on it
             Spinner spin = (Spinner) itemView.findViewById(R.id.spin_tp);
             spin.setOnItemSelectedListener(this);
 
             //Creating the ArrayAdapter instance having the bank name list
-            ArrayAdapter aa = new ArrayAdapter(itemView.getContext(),R.layout.white_spinner_item, periods);
+            ArrayAdapter aa = new ArrayAdapter(itemView.getContext(),R.layout.black_spinner_item, periods);
             aa.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
             //Setting the ArrayAdapter data on the Spinner
             spin.setAdapter(aa);

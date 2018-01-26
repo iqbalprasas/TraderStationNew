@@ -42,7 +42,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="16dp">
+        android:layout_marginBottom="8dp">
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -50,14 +50,20 @@
             android:textSize="18sp"
             android:textStyle="bold"
             android:padding="8dp"
-            android:background="@drawable/shape_chat_tt"
+            android:background="@drawable/shape_top_broker"
             android:layout_gravity="center"
             android:gravity="center"
             android:textColor="#FFF"/>
     </LinearLayout>
-    <android.support.v7.widget.RecyclerView
+    <com.example.telc2.traderstation.helper.ExpandableHeightGridView
+        android:id="@+id/gridview_broker"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/recyclerBroker" />
+        android:gravity="center"
+        android:numColumns="2"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="8dp"
+        android:horizontalSpacing="8dp"
+        />
 
 </LinearLayout>

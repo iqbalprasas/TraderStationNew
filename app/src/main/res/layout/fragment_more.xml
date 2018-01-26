@@ -23,10 +23,8 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="2.5"
-            android:scaleType="fitCenter"
-            android:padding="@dimen/padding_img_more"
             android:background="@drawable/shape_btn_calendar"
-            android:src="@drawable/icon_tap_e_calendar"
+            android:src="@drawable/economic_calendar2"
             android:gravity="center"/>
 
         <View
@@ -40,10 +38,8 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="2.5"
-            android:scaleType="fitCenter"
-            android:padding="@dimen/padding_img_more"
             android:background="@drawable/shape_btn_event"
-            android:src="@drawable/icon_tap_event"
+            android:src="@drawable/event"
             android:gravity="center"/>
         <View
             android:layout_width="0dp"
@@ -56,10 +52,8 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="2.5"
-            android:scaleType="fitCenter"
-            android:padding="@dimen/padding_img_more"
             android:background="@drawable/shape_btn_webinar"
-            android:src="@drawable/icon_webniar"
+            android:src="@drawable/webniar"
             android:gravity="center"/>
     </LinearLayout>
 
@@ -131,10 +125,8 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="2.5"
-            android:scaleType="fitCenter"
-            android:padding="@dimen/padding_img_more"
             android:background="@drawable/shape_btn_competition"
-            android:src="@drawable/icon_tap_competition"
+            android:src="@drawable/competition"
             android:gravity="center"/>
 
         <View
@@ -149,10 +141,8 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="2.5"
-            android:scaleType="fitCenter"
-            android:padding="@dimen/padding_img_more"
             android:background="@drawable/shape_btn_broker"
-            android:src="@drawable/icon_tap_broker"
+            android:src="@drawable/broker"
             android:gravity="center"/>
 
         <View
@@ -167,10 +157,8 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="2.5"
-            android:scaleType="fitCenter"
-            android:padding="@dimen/padding_img_more"
             android:background="@drawable/shape_btn_rebate"
-            android:src="@drawable/icon_tap_rebate_broker"
+            android:src="@drawable/rebate_broker2"
             android:gravity="center"/>
     </LinearLayout>
 
@@ -241,10 +229,8 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="2.5"
-            android:scaleType="fitCenter"
-            android:padding="@dimen/padding_img_more"
             android:background="@drawable/shape_btn_tp"
-            android:src="@drawable/icon_tap_trader_performance"
+            android:src="@drawable/trader_performance2"
             android:gravity="center"/>
         <View
             android:layout_width="0dp"
@@ -257,10 +243,8 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="2.5"
-            android:scaleType="fitCenter"
-            android:padding="@dimen/padding_img_more"
             android:background="@drawable/shape_btn_webinar"
-            android:src="@drawable/icon_ea_performance"
+            android:src="@drawable/ea_performance2"
             android:gravity="center"/>
         <View
             android:layout_width="0dp"
@@ -273,10 +257,8 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="2.5"
-            android:scaleType="fitCenter"
-            android:padding="@dimen/padding_img_more"
             android:background="@drawable/shape_btn_pamm"
-            android:src="@drawable/icon_tap_pamm"
+            android:src="@drawable/pamm"
             android:gravity="center"/>
     </LinearLayout>
 
@@ -347,11 +329,9 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="2.5"
-            android:scaleType="fitCenter"
-            android:padding="@dimen/padding_img_more"
             android:background="@drawable/shape_btn_broker"
             android:gravity="center"
-            android:src="@drawable/icon_tap_gallery" />
+            android:src="@drawable/gallery" />
         <View
             android:layout_width="0dp"
             android:layout_height="0dp"
@@ -363,10 +343,8 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="2.5"
-            android:scaleType="fitCenter"
-            android:padding="@dimen/padding_img_more"
             android:background="@drawable/shape_btn_rebate"
-            android:src="@drawable/icon_tap_promotion"
+            android:src="@drawable/promotion"
             android:gravity="center"/>
         <View
             android:layout_width="0dp"
@@ -379,10 +357,8 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="2.5"
-            android:scaleType="fitCenter"
-            android:padding="@dimen/padding_img_more"
             android:background="@drawable/shape_btn_competition"
-            android:src="@drawable/icon_tap_shop"
+            android:src="@drawable/shop"
             android:gravity="center"/>
     </LinearLayout>
     <LinearLayout

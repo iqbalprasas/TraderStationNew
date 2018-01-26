@@ -62,21 +62,35 @@ public class EAPerformanceAdapter extends RecyclerView.Adapter<EAPerformanceAdap
 
             //adding sliding effect
             holder.expandLayout.startAnimation(slideDown);
+
+            holder.btnExpand.setVisibility(View.GONE);
         }
 
         holder.btnExpand.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                if(currentPosition == position){
-                    //holder.expandLayout.setVisibility(View.GONE);
-                    currentPosition = -1;
-                }else{
-                    //getting the position of the item to expand it
-                    currentPosition = position;
-                }
+//                if(currentPosition == position){
+//                    //holder.expandLayout.setVisibility(View.GONE);
+//                    currentPosition = -1;
+//                }else{
+//                    //getting the position of the item to expand it
+//                    currentPosition = position;
+//                }
+                currentPosition = position;
                 //reloding the list
                 notifyDataSetChanged();
+            }
+        });
+
+        holder.btnExpandUp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                currentPosition = -1;
+                //reloding the list
+                notifyDataSetChanged();
+                holder.btnExpand.setVisibility(View.VISIBLE);
             }
         });
     }
@@ -89,25 +103,25 @@ public class EAPerformanceAdapter extends RecyclerView.Adapter<EAPerformanceAdap
     class HeroViewHolder extends RecyclerView.ViewHolder {
         TextView txName;
         ImageButton btnExpand;
+        ImageButton btnExpandUp;
         LinearLayout expandLayout;
         LineGraphSeries<DataPoint> mSeries2;
         GraphView graph2;
-        ProgressBar pgrRate;
 
         HeroViewHolder(View itemView) {
             super(itemView);
 
             txName = (TextView) itemView.findViewById(R.id.tx_username_ea);
             btnExpand = (ImageButton) itemView.findViewById(R.id.btn_expand_ea);
+            btnExpandUp = (ImageButton) itemView.findViewById(R.id.btn_expand_ea_up);
             expandLayout = (LinearLayout) itemView.findViewById(R.id.expand_layout_ea);
             graph2 = (GraphView) itemView.findViewById(R.id.graph_ea);
             mSeries2 = new LineGraphSeries<>();
-            pgrRate = (ProgressBar) itemView.findViewById(R.id.pgr_ea);
 
             mSeries2.setColor(Color.parseColor("#4AB240"));
-            graph2.getGridLabelRenderer().setGridColor(Color.WHITE);
-            graph2.getGridLabelRenderer().setHorizontalLabelsVisible(false);
-            graph2.getGridLabelRenderer().setVerticalLabelsVisible(false);
+            graph2.getGridLabelRenderer().setGridColor(Color.BLACK);
+            graph2.getGridLabelRenderer().setHorizontalLabelsVisible(true);
+            graph2.getGridLabelRenderer().setVerticalLabelsVisible(true);
 //            graph2.getGridLabelRenderer().setVerticalLabelsVAlign(GridLabelRenderer.VerticalLabelsVAlign.ABOVE);
 //            graph2.getGridLabelRenderer().setGridStyle(GridLabelRenderer.GridStyle.HORIZONTAL);
             graph2.getGridLabelRenderer().reloadStyles();

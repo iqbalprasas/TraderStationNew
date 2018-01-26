@@ -5,185 +5,247 @@
     android:padding="@dimen/activity_horizontal_margin"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/cardview_dark_background"
-    app:cardElevation="4dp"
+    app:cardElevation="0dp"
     xmlns:android="http://schemas.android.com/apk/res/android">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="8dp"
-        android:orientation="horizontal">
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginRight="2dp"
-            android:padding="1dp">
-            <ImageView
-                android:layout_width="@dimen/img_pp_comp"
-                android:layout_height="@dimen/img_pp_comp"
-                android:id="@+id/img_profile_comp"
-                android:layout_marginBottom="2dp"
-                android:layout_gravity="center"
-                app:srcCompat="@mipmap/ic_launcher_round" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/shape_chat_tt"
-                android:padding="4dp"
-                android:textSize="@dimen/font_live"
-                android:textColor="#fff"
-                android:text="Live Reviews"/>
+        android:paddingTop="8dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingBottom="1dp"
+        android:background="#4c4c4c"
+        android:orientation="vertical">
 
-        </LinearLayout>
-        <View
-            android:layout_width="1dp"
-            android:layout_height="match_parent"
-            android:background="@color/colorPrimaryDark"
-            android:layout_marginRight="2dp"/>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginLeft="4dp"
+            android:layout_marginRight="2dp"
+            android:orientation="horizontal"
             android:padding="1dp">
-            <TextView
+
+            <com.github.siyamed.shapeimageview.CircularImageView
+                android:id="@+id/img_profile_comp"
+                android:layout_width="@dimen/img_pp_comp"
+                android:layout_height="@dimen/img_pp_comp"
+                android:src="@drawable/viewimage"
+                android:layout_marginRight="8dp"
+                app:siBorderColor="#79C739"
+                app:siBorderWidth="0dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center|left"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/tx_username_comp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Username"
+                        android:textColor="#fff"
+                        android:textStyle="bold" />
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="right">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/shape_live_review"
+                            android:paddingLeft="16dp"
+                            android:paddingRight="16dp"
+                            android:gravity="center"
+                            android:text="Live Reviews"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="@dimen/font_live" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:src="@drawable/starbar_3"/>
+                <com.github.siyamed.shapeimageview.RoundedImageView
+                    android:id="@+id/img_flag_comp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/united_kingdom"
+                    app:siRadius="0dp"
+                    app:siBorderWidth="1dp"
+                    app:siBorderColor="#fff" />
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Username"
-                android:textColor="#000"
-                android:id="@+id/tx_username_comp"
-                android:textStyle="bold"/>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:weightSum="5">
-                <ProgressBar
-                    android:layout_width="0dp"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    style="?android:attr/progressBarStyleHorizontal"
-                    android:layout_weight="1.5"
-                    android:id="@+id/pgr_comp"/>
-                <View
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
-                    android:layout_weight="3"/>
-                <ImageView
-                    android:id="@+id/img_flag_comp"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:src="@drawable/united_kingdom"
-                    android:layout_gravity="left"
-                    android:layout_weight="0.5" />
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Open Trades"
+                        android:layout_marginRight="8dp"
+                        android:textSize="@dimen/font_size"
+                        android:textColor="#fff" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2"
+                        android:textSize="@dimen/font_size"
+                        android:layout_gravity="center"
+                        android:textStyle="bold"
+                        android:textColor="#fff"
+                        android:id="@+id/tx_ot_comp"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Close Trades"
+                        android:layout_marginRight="8dp"
+                        android:textSize="@dimen/font_size"
+                        android:textColor="#fff" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2"
+                        android:textSize="@dimen/font_size"
+                        android:layout_gravity="center"
+                        android:textColor="#fff"
+                        android:textStyle="bold"
+                        android:id="@+id/tx_ct_comp"/>
+                </LinearLayout>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:weightSum="6">
-                <TextView
-                    android:layout_width="0dp"
+                android:orientation="vertical"
+                android:layout_marginLeft="4dp"
+                android:padding="1dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Gain"
-                    android:textSize="@dimen/font_size"
-                    android:layout_weight="1"
-                    android:textColor="#000" />
-                <TextView
-                    android:layout_width="0dp"
+                    android:orientation="horizontal"
+                    android:gravity="right"
+                    android:weightSum="6">
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:layout_weight="2.7">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="100%"
+                            android:textSize="@dimen/font_size"
+                            android:textColor="#fff"
+                            android:textStyle="bold"
+                            android:id="@+id/tx_gain_comp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Gain"
+                            android:textSize="@dimen/font_size"
+                            android:textColor="#fff" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:layout_weight="2.7">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="$ 1234567"
+                            android:textSize="@dimen/font_size"
+                            android:textColor="#fff"
+                            android:textStyle="bold"
+                            android:id="@+id/tx_balance_comp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Balance"
+                            android:textSize="@dimen/font_size"
+                            android:textColor="#fff" />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="100%"
-                    android:textSize="@dimen/font_size"
-                    android:layout_weight="1.7"
-                    android:textColor="#000"
-                    android:id="@+id/tx_gain_comp"/>
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:text="Balance"
-                    android:textSize="@dimen/font_size"
-                    android:layout_weight="1.3"
-                    android:textColor="#000" />
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:text="$ 1234567"
-                    android:textSize="@dimen/font_size"
-                    android:layout_weight="1.5"
-                    android:textColor="#000"
-                    android:id="@+id/tx_balance_comp"/>
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:weightSum="6">
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:text="Profit"
-                    android:textSize="@dimen/font_size"
-                    android:layout_weight="1"
-                    android:textColor="#000" />
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:text="100%"
-                    android:layout_weight="1.7"
-                    android:textSize="@dimen/font_size"
-                    android:textColor="#000"
-                    android:id="@+id/tx_profit_comp"/>
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:text="Equity"
-                    android:textSize="@dimen/font_size"
-                    android:layout_weight="1.3"
-                    android:textColor="#000" />
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:text="$ 1234567"
-                    android:textSize="@dimen/font_size"
-                    android:layout_weight="1.5"
-                    android:textColor="#000"
-                    android:id="@+id/tx_equity_comp"/>
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:weightSum="6">
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:text="Open Trades"
-                    android:textSize="@dimen/font_size"
-                    android:layout_weight="2"
-                    android:textColor="#000" />
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:text="2"
-                    android:textSize="@dimen/font_size"
-                    android:layout_weight="0.7"
-                    android:textColor="#000"
-                    android:id="@+id/tx_ot_comp"/>
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:text="Close Trades"
-                    android:textSize="@dimen/font_size"
-                    android:layout_weight="2"
-                    android:textColor="#000" />
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:text="6"
-                    android:textSize="@dimen/font_size"
-                    android:layout_weight="1"
-                    android:textColor="#000"
-                    android:id="@+id/tx_ct_comp"/>
+                    android:orientation="horizontal"
+                    android:gravity="right"
+                    android:weightSum="6">
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:layout_weight="2.7">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="100%"
+                            android:textSize="@dimen/font_size"
+                            android:textColor="#fff"
+                            android:textStyle="bold"
+                            android:id="@+id/tx_profit_comp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Profit"
+                            android:textSize="@dimen/font_size"
+                            android:textColor="#fff" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:layout_weight="2.7">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="$ 1234567"
+                            android:textSize="@dimen/font_size"
+                            android:textColor="#fff"
+                            android:textStyle="bold"
+                            android:id="@+id/tx_equity_comp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Equity"
+                            android:textSize="@dimen/font_size"
+                            android:textColor="#fff" />
+                    </LinearLayout>
+                </LinearLayout>
             </LinearLayout>
         </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="4dp"
+            android:background="#999999"/>
     </LinearLayout>
 </android.support.v7.widget.CardView>

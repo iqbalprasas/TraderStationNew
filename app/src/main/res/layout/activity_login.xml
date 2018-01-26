@@ -64,14 +64,17 @@
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:id="@+id/btn_login_frame"
+            android:clickable="true"
             android:background="@drawable/shape_btn_login">
             <Button
                 android:id="@+id/btn_masuk"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@android:color/transparent"
                 android:layout_gravity="center"
                 android:text="Login"
+                android:drawableLeft="@drawable/putih_pintu"
                 android:drawablePadding="16dp"
                 android:textColor="#FFFFFF" />
         </FrameLayout>

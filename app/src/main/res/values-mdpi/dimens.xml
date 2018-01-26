@@ -16,10 +16,11 @@
     <dimen name="height_desc_tp">40dp</dimen>
     <dimen name="widht_side_button_tp">59dp</dimen>
     <dimen name="img_pp_ea">64dp</dimen>
-    <dimen name="img_start_ea">23dp</dimen>
-    <dimen name="font_profit_pamm">10sp</dimen>
+    <dimen name="img_start_ea">21dp</dimen>
+    <dimen name="font_profit_pamm">14sp</dimen>
+    <dimen name="font_profit_pamm2">10sp</dimen>
     <dimen name="height_web_pamm">130dp</dimen>
-    <dimen name="height_graph_pamm">100dp</dimen>
+    <dimen name="height_graph_pamm">65dp</dimen>
     <dimen name="font_desc2_pamm">11sp</dimen>
     <dimen name="font_desc_pamm">8sp</dimen>
     <dimen name="font_ts_login">30sp</dimen>
@@ -29,4 +30,6 @@
     <dimen name="font_desc_timeline">9sp</dimen>
     <dimen name="padding_img_more">22dp</dimen>
     <dimen name="font_status_timeline">8sp</dimen>
+    <dimen name="height_circle_tp">75dp</dimen>
+    <dimen name="font_circle_tp">7sp</dimen>
 </resources>

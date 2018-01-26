@@ -51,13 +51,11 @@ public class RebateBrokerAdapter extends RecyclerView.Adapter<RebateBrokerAdapte
 
         public int id;
         public ImageView imgBroker;
-        public TextView txType;
         public TextView txRebate;
         public Button btnJoin;
 
         public HolderData(View itemView) {
             super(itemView);
-            txType = (TextView) itemView.findViewById(R.id.tx_type_rb);
             txRebate = (TextView) itemView.findViewById(R.id.tx_rebate_rb);
             imgBroker = (ImageView) itemView.findViewById(R.id.img_broker_rb);
             btnJoin = (Button) itemView.findViewById(R.id.btn_join_rb);

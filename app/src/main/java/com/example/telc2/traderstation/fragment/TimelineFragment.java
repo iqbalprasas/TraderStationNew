@@ -3,6 +3,8 @@ package com.example.telc2.traderstation.fragment;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
@@ -66,6 +68,15 @@ public class TimelineFragment extends Fragment implements SearchView.OnQueryText
         checkAnalysis = (CheckBox)v.findViewById(R.id.checkBoxAnalysis);
         linearFilter = (LinearLayout) v.findViewById(R.id.layout_filter);
 
+        FloatingActionButton fab = (FloatingActionButton) v.findViewById(R.id.fab_timeline);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Snackbar.make(view, "New Post", Snackbar.LENGTH_LONG)
+                        .setAction("Select", null).show();
+            }
+        });
+
         linearFilter.setVisibility(v.GONE);
 
 //        checkAll.setVisibility(v.GONE);
@@ -123,6 +134,8 @@ public class TimelineFragment extends Fragment implements SearchView.OnQueryText
             @Override
             public void onClick(View v) {
                 if(linearFilter.getVisibility()==v.VISIBLE){
+                    Animation slideUp = AnimationUtils.loadAnimation(getContext(), R.anim.anim_close);
+                    linearFilter.startAnimation(slideUp);
                     linearFilter.setVisibility(v.GONE);
                 }else {
                     linearFilter.setVisibility(v.VISIBLE);

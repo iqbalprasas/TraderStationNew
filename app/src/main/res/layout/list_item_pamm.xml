@@ -11,103 +11,105 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        android:orientation="vertical"
         android:baselineAligned="false"
-        android:padding="8dp"
-        android:weightSum="4">
+        android:paddingBottom="8dp">
         <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical">
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="PAMM"
-                android:gravity="center"
-                android:textStyle="bold"
-                android:id="@+id/tx_name_pamm"
-                android:textColor="#000"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Account"
-                android:gravity="center"
-                android:id="@+id/tx_account_pamm"
-                android:textColor="#000"/>
-            <ProgressBar
-                android:layout_width="match_parent"
-                android:layout_height="10dp"
-                android:layout_marginTop="3dp"
-                android:layout_marginBottom="3dp"
-                style="?android:attr/progressBarStyleHorizontal"
-                android:progress="90"
-                android:indeterminate="false"
-                android:id="@+id/pgr_pamm"/>
-        </LinearLayout>
-    <LinearLayout
-        android:layout_width="0dp"
-        android:paddingLeft="6dp"
-        android:layout_height="match_parent"
-        android:layout_weight="1.5"
-        android:orientation="vertical">
-        <com.jjoe64.graphview.GraphView
-            android:id="@+id/graph_pamm"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="0dp"
-        android:paddingLeft="6dp"
-        android:paddingTop="6dp"
-        android:paddingBottom="6dp"
-        android:layout_height="match_parent"
-        android:layout_weight="1.5"
-        android:orientation="vertical">
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp"
+            android:background="#4c4c4c">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="PAMM"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:id="@+id/tx_name_pamm"
+                    android:textColor="#999"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Account"
+                    android:gravity="right"
+                    android:id="@+id/tx_account_pamm"
+                    android:textColor="#999"/>
+            </LinearLayout>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/starbar_3"
+                android:layout_gravity="right"/>
+        </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:weightSum="2">
-            <TextView
+            android:padding="8dp"
+            android:weightSum="5">
+            <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:layout_marginRight="6dp"
+                android:padding="6dp">
+                <com.jjoe64.graphview.GraphView
+                    android:id="@+id/graph_pamm"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/height_graph_pamm"
+                    android:layout_weight="2"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
                 android:layout_weight="1.3"
-                android:textSize="@dimen/font_profit_pamm"
-                android:text="Profitability"
-                android:textColor="#000"/>
-            <TextView
+                android:gravity="center"
+                android:orientation="vertical"
+                android:background="@drawable/shape_btn_webinar">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/font_profit_pamm2"
+                    android:text="Profitability"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/font_profit_pamm"
+                    android:text="108.9%"
+                    android:textStyle="bold"
+                    android:id="@+id/tx_profit_pamm"
+                    android:textColor="@color/colorPrimary"/>
+            </LinearLayout>
+            <View
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.7"
-                android:textSize="@dimen/font_profit_pamm"
-                android:text="108.9 %"
-                android:id="@+id/tx_profit_pamm"
-                android:textColor="@color/colorPrimary"/>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:gravity="bottom"
-            android:layout_gravity="bottom"
-            android:weightSum="2">
-            <TextView
+                android:layout_height="0dp"
+                android:layout_weight="0.3"/>
+            <LinearLayout
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="1.3"
-                android:textSize="@dimen/font_profit_pamm"
-                android:text="Today"
-                android:textColor="#000"/>
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.7"
-                android:textSize="@dimen/font_profit_pamm"
-                android:text="-0.49 %"
-                android:id="@+id/tx_today_pamm"
-                android:textColor="@android:color/holo_red_dark"/>
+                android:gravity="center"
+                android:orientation="vertical"
+                android:background="@drawable/shape_btn_event">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/font_profit_pamm2"
+                    android:text="Today"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/font_profit_pamm"
+                    android:text="-0.49%"
+                    android:textStyle="bold"
+                    android:id="@+id/tx_today_pamm"
+                    android:textColor="#EC6C6A"/>
+            </LinearLayout>
         </LinearLayout>
-    </LinearLayout>
     </LinearLayout>
 </android.support.v7.widget.CardView>

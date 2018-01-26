@@ -54,13 +54,13 @@ public class CalendarActivity extends AppCompatActivity{
         tabLayout.getTabAt(2).setText("Tomorrow");
         tabLayout.getTabAt(3).setText("This Week");
 
-        LinearLayout linearLayout = (LinearLayout)tabLayout.getChildAt(0);
-        linearLayout.setShowDividers(LinearLayout.SHOW_DIVIDER_MIDDLE);
-        GradientDrawable drawable = new GradientDrawable();
-        drawable.setColor(Color.LTGRAY);
-        drawable.setSize(1, 1);
-        linearLayout.setDividerPadding(10);
-        linearLayout.setDividerDrawable(drawable);
+//        LinearLayout linearLayout = (LinearLayout)tabLayout.getChildAt(0);
+//        linearLayout.setShowDividers(LinearLayout.SHOW_DIVIDER_MIDDLE);
+//        GradientDrawable drawable = new GradientDrawable();
+//        drawable.setColor(Color.LTGRAY);
+//        drawable.setSize(1, 1);
+//        linearLayout.setDividerPadding(10);
+//        linearLayout.setDividerDrawable(drawable);
 
         final CalendarPagerAdapter adapter = new CalendarPagerAdapter(getSupportFragmentManager(), tabLayout.getTabCount());
         viewPager.setAdapter(adapter);

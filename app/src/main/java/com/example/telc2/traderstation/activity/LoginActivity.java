@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.FrameLayout;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
@@ -31,6 +32,7 @@ import javax.net.ssl.HttpsURLConnection;
 public class LoginActivity extends AppCompatActivity {
 
     Button btnMasuk;
+    FrameLayout btnMasukFrame;
     EditText edt_usname, edt_pswd;
     ProgressDialog dialog;
 
@@ -44,6 +46,14 @@ public class LoginActivity extends AppCompatActivity {
         edt_usname = (EditText) findViewById(R.id.edt_usname);
         edt_pswd = (EditText) findViewById(R.id.edt_pswd);
         btnMasuk = (Button) findViewById(R.id.btn_masuk);
+        btnMasukFrame = (FrameLayout) findViewById(R.id.btn_login_frame);
+        btnMasukFrame.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.show();
+                new SendPostRequest().execute();
+            }
+        });
         btnMasuk.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -43,87 +43,96 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="8dp">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Lorem Ipsum"
-                android:textColor="#000"
-                android:background="@drawable/shape_desc_gallery"
-                android:textSize="18sp"
-                android:paddingLeft="24dp"
-                android:paddingRight="24dp"
-                android:layout_marginBottom="8dp"
-                android:textStyle="bold"
-                android:layout_gravity="center" />
+            android:orientation="vertical">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="4dp"
-                android:background="@drawable/shape_desc_gallery">
-                <com.daimajia.slider.library.SliderLayout
-                    android:id="@+id/slider_album_selected"
-                    android:layout_width="match_parent"
-                    android:layout_height="200dp"
-                    android:layout_marginBottom="8dp"
-                    />
+                android:orientation="vertical">
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginBottom="0dp"
-                    android:weightSum="6">
-                    <ImageView
-                        android:layout_width="0dp"
-                        android:layout_height="48dp"
-                        android:layout_weight="1"
-                        android:layout_marginRight="4dp"
-                        android:src="@drawable/profile"
-                        android:id="@+id/img_profile_gallery"/>
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="3"
-                        android:gravity="center_vertical"
-                        android:text="User"
-                        android:textSize="18sp"
-                        android:textColor="#fff"
-                        android:textStyle="bold"
-                        android:id="@+id/tx_name_gallery"/>
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="2"
-                        android:gravity="top|right"
-                        android:text="20 minutes ago"
-                        android:textSize="12sp"
-                        android:textColor="#fff"
-                        android:textStyle="bold"
-                        android:id="@+id/tx_time_gallery"/>
+                    android:padding="8dp">
+                    <com.daimajia.slider.library.SliderLayout
+                        android:id="@+id/slider_album_selected"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:layout_marginBottom="8dp"
+                        />
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#4c4c4c"
+                    android:padding="8dp"
                     android:orientation="vertical">
-                    <TextView
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Lorem Ipsum Dolor Sit Amet"
-                        android:gravity="center"
-                        android:textSize="18sp"
-                        android:textColor="#000"
-                        android:textStyle="bold"
-                        android:id="@+id/tx_title_gallery"/>
-                    <TextView
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="0dp">
+                        <com.github.siyamed.shapeimageview.CircularImageView
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:layout_marginRight="8dp"
+                            android:src="@drawable/viewimage"
+                            android:id="@+id/img_profile_gallery_selected"
+                            app:siBorderColor="#79C739"
+                            app:siBorderWidth="0dp"/>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="center_vertical"
+                                android:text="User"
+                                android:textSize="18sp"
+                                android:textColor="#fff"
+                                android:textStyle="bold"
+                                android:id="@+id/tx_name_gallery_selected"/>
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="4dp"
+                                    android:src="@drawable/time_event" />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="top|right"
+                                    android:text="20 minutes ago"
+                                    android:textSize="10sp"
+                                    android:textColor="#999"
+                                    android:textStyle="bold"
+                                    android:id="@+id/tx_time_gallery_selected"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras maximus leo eget laoreet tempus. Suspendisse quis consequat purus, a aliquet dolor."
-                        android:gravity="center"
-                        android:layout_marginBottom="4dp"
-                        android:textColor="#000"
-                        android:id="@+id/tx_desc_gallery"/>
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Lorem Ipsum Dolor Sit Amet"
+                            android:gravity="center"
+                            android:textSize="18sp"
+                            android:textColor="#fff"
+                            android:textStyle="bold"
+                            android:id="@+id/tx_title_gallery_selected"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras maximus leo eget laoreet tempus. Suspendisse quis consequat purus, a aliquet dolor."
+                            android:gravity="left"
+                            android:textColor="#fff"
+                            android:id="@+id/tx_desc_gallery_selected"/>
+                    </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>

@@ -45,7 +45,6 @@ public class AlbumFragment extends Fragment {
                 startActivity(intent); // start Intent
             }
         });
-
         return v;
     }
 }

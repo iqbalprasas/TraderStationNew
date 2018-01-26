@@ -10,21 +10,24 @@
         android:background="@drawable/seminar_web"
         android:id="@+id/img_cover_album">
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
             android:orientation="horizontal"
             android:gravity="right"
-            android:background="#CC000000">
+            android:background="@drawable/shape_num_img">
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_image" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="8"
                 android:textColor="#fff"
                 android:id="@+id/tx_numslide_album"/>
-            <ImageView
-                android:layout_width="18dp"
-                android:layout_height="match_parent"
-                android:src="@drawable/ic_image"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"

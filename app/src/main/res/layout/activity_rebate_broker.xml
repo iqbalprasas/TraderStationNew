@@ -38,7 +38,54 @@
                 android:id="@+id/toolbar_title_rb" />
         </LinearLayout>
     </android.support.v7.widget.Toolbar>
-
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#4c4c4c"
+        android:weightSum="4">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="1.5">
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Broker"
+                android:drawableLeft="@drawable/table_broker"
+                android:textColor="@color/colorPrimary"
+                android:background="@android:color/transparent"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="1.3">
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rebate Broker"
+                android:textSize="12sp"
+                android:drawableLeft="@drawable/table_rebate_broker"
+                android:textColor="@color/colorPrimary"
+                android:background="@android:color/transparent"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="1.2">
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Register"
+                android:textSize="12sp"
+                android:drawableLeft="@drawable/table_register"
+                android:textColor="@color/colorPrimary"
+                android:background="@android:color/transparent"/>
+        </LinearLayout>
+    </LinearLayout>
     <android.support.v7.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
