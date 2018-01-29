@@ -55,6 +55,7 @@
         <activity android:name=".activity.AlbumSelectedActivity"/>
         <activity android:name=".activity.EventSelectedActivity"/>
         <activity android:name=".activity.TimelineSelectedActivity"/>
+        <activity android:name=".activity.ShopActivity"/>
     </application>
 
 </manifest>

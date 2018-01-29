@@ -29,6 +29,6 @@
     <dimen name="font_desc_timeline">12sp</dimen>
     <dimen name="padding_img_more">24dp</dimen>
     <dimen name="font_status_timeline">10sp</dimen>
-    <dimen name="height_circle_tp">95dp</dimen>
+    <dimen name="height_circle_tp">92dp</dimen>
     <dimen name="font_circle_tp">10sp</dimen>
 </resources>

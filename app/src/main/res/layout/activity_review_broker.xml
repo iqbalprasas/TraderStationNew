@@ -40,116 +40,136 @@
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-            <LinearLayout
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:paddingRight="8dp"
-                android:paddingLeft="8dp"
-                android:paddingBottom="8dp">
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="100dp"
-                    android:layout_marginBottom="6dp"
-                    android:src="@drawable/forextime_logo"/>
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="#000"/>
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:gravity="center">
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:weightSum="4"
-                    android:orientation="horizontal">
-                    <TextView
-                        android:layout_width="0dp"
+                    android:orientation="vertical"
+                    android:layout_marginTop="51dp"
+                    android:paddingRight="4dp"
+                    android:paddingLeft="4dp"
+                    android:paddingBottom="4dp"
+                    android:background="#fff">
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textColor="#000"
-                        android:layout_weight="1.4"
-                        android:textSize="18sp"
-                        android:text="Name"/>
-                    <TextView
-                        android:layout_width="0dp"
+                        android:weightSum="4"
+                        android:paddingTop="50dp"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:textColor="#4c4c4c"
+                            android:layout_weight="1.4"
+                            android:textSize="18sp"
+                            android:text="Name"/>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:textColor="#4c4c4c"
+                            android:layout_weight="2.6"
+                            android:textSize="18sp"
+                            android:gravity="right"
+                            android:text="FXTM"
+                            android:id="@+id/img_logo_review_broker"/>
+                    </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#000"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textColor="#000"
-                        android:layout_weight="3"
+                        android:weightSum="4"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:textColor="#4c4c4c"
+                            android:layout_weight="1.4"
+                            android:textSize="18sp"
+                            android:text="Website"/>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:textColor="#4c4c4c"
+                            android:layout_weight="2.6"
+                            android:textSize="18sp"
+                            android:gravity="right"
+                            android:text="http://fxtm.com"
+                            android:id="@+id/tx_link_review_broker"/>
+                    </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#000"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:weightSum="4"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:textColor="#4c4c4c"
+                            android:layout_weight="1.4"
+                            android:textSize="18sp"
+                            android:text="Established"/>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:textColor="#4c4c4c"
+                            android:layout_weight="2.6"
+                            android:gravity="right"
+                            android:textSize="18sp"
+                            android:text="2009"
+                            android:id="@+id/tx_esth_review_broker"/>
+                    </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="#000"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#4c4c4c"
                         android:textSize="18sp"
-                        android:text=": FXTM"
-                        android:id="@+id/img_logo_review_broker"/>
+                        android:gravity="center"
+                        android:layout_marginBottom="6dp"
+                        android:text="Review"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#4c4c4c"
+                        android:layout_marginBottom="6dp"
+                        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vulputate leo non augue fringilla, in imperdiet sem placerat. Cras consectetur leo quam, ac faucibus nibh iaculis vitae. Sed in diam eu dolor lobortis suscipit non non lorem. Donec pretium commodo feugiat. Nullam scelerisque molestie nunc."/>
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:src="@drawable/fxtm_web"/>
                 </LinearLayout>
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="#000"/>
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:weightSum="4"
-                    android:orientation="horizontal">
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:textColor="#000"
-                        android:layout_weight="1.4"
-                        android:textSize="18sp"
-                        android:text="Website"/>
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:textColor="#000"
-                        android:layout_weight="3"
-                        android:textSize="18sp"
-                        android:text=": http://fxtm.com"
-                        android:id="@+id/tx_link_review_broker"/>
+                    android:gravity="center">
+                    <ImageView
+                        android:layout_width="86dp"
+                        android:layout_height="86dp"
+                        android:src="@drawable/forextime_logo"
+                        android:background="@drawable/shape_btn_webinar"
+                        android:id="@+id/img_review_broker"
+                        android:padding="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_gravity="center"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerInside"/>
                 </LinearLayout>
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="#000"/>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:weightSum="4"
-                    android:orientation="horizontal">
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:textColor="#000"
-                        android:layout_weight="1.4"
-                        android:textSize="18sp"
-                        android:text="Established"/>
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:textColor="#000"
-                        android:layout_weight="3"
-                        android:textSize="18sp"
-                        android:text=": 2009"
-                        android:id="@+id/tx_esth_review_broker"/>
-                </LinearLayout>
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_marginBottom="6dp"
-                    android:background="#000"/>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textColor="#000"
-                    android:textSize="18sp"
-                    android:gravity="center"
-                    android:layout_marginBottom="6dp"
-                    android:text="FXTM Review"/>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textColor="#000"
-                    android:layout_marginBottom="6dp"
-                    android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vulputate leo non augue fringilla, in imperdiet sem placerat. Cras consectetur leo quam, ac faucibus nibh iaculis vitae. Sed in diam eu dolor lobortis suscipit non non lorem. Donec pretium commodo feugiat. Nullam scelerisque molestie nunc."/>
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="200dp"
-                    android:src="@drawable/fxtm_web"/>
-            </LinearLayout>
+            </RelativeLayout>
         </ScrollView>
 </LinearLayout>

@@ -22,6 +22,7 @@ import com.example.telc2.traderstation.activity.EventActivity;
 import com.example.telc2.traderstation.activity.GalleryActivity;
 import com.example.telc2.traderstation.activity.PammActivity;
 import com.example.telc2.traderstation.activity.RebateBrokerActivity;
+import com.example.telc2.traderstation.activity.ShopActivity;
 import com.example.telc2.traderstation.activity.TraderPerformanceActvity;
 import com.example.telc2.traderstation.activity.WebinarActivity;
 
@@ -32,7 +33,7 @@ import com.example.telc2.traderstation.activity.WebinarActivity;
 public class MoreFragment extends Fragment{
 
     ImageButton btnTraderPerformance, btnEvent, btnWebinar, btnCalendar, btnCompetition,
-            btnRebateBroker, btnBroker, btnEaPerformance, btnPamm, btnGallery;
+            btnRebateBroker, btnBroker, btnEaPerformance, btnPamm, btnGallery, btnShop;
     private Toolbar toolbar;
     private ImageButton searctTt;
 
@@ -58,6 +59,7 @@ public class MoreFragment extends Fragment{
         btnEaPerformance = (ImageButton) v.findViewById(R.id.btn_more_ea_performance);
         btnPamm = (ImageButton) v.findViewById(R.id.btn_more_pamm);
         btnGallery = (ImageButton) v.findViewById(R.id.btn_more_gallery);
+        btnShop = (ImageButton) v.findViewById(R.id.btn_more_shop);
 
         btnTraderPerformance.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -126,6 +128,13 @@ public class MoreFragment extends Fragment{
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(v.getContext(), GalleryActivity.class);
+                getActivity().startActivity(intent);
+            }
+        });
+        btnShop.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(), ShopActivity.class);
                 getActivity().startActivity(intent);
             }
         });

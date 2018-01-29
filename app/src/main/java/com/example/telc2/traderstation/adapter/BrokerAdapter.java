@@ -52,9 +52,8 @@ public class BrokerAdapter extends BaseAdapter {
     public View getView(int i, View view, ViewGroup viewGroup) {
         view = inflter.inflate(R.layout.list_item_broker, null);
 //        LinearLayout layout = (LinearLayout) view.findViewById(R.id.img_cover_album);
-//        layout.setBackgroundResource(images[i]);
+//        layout.setBackgroundResource(discount[i]);
         expandButton = (LinearLayout) view.findViewById(R.id.layout_expand_broker);
-        expandButton.setVisibility(View.GONE);
         Button btnWebsite = (Button) view.findViewById(R.id.btn_web_broker);
         Button btnReview = (Button) view.findViewById(R.id.btn_review_broker);
         ImageButton btnClose = (ImageButton) view.findViewById(R.id.btn_close_expand_broker);
@@ -68,8 +67,8 @@ public class BrokerAdapter extends BaseAdapter {
         btnReview.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(context, "Review",
-                        Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(context, ReviewBrokerActivity.class);
+                context.startActivity(intent); // start Intent
             }
         });
         btnClose.setOnClickListener(new View.OnClickListener() {
